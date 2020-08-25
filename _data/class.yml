@@ -1,25 +1,31 @@
 instructor: 
   name: Matthew Turk
   email: mjturk@illinois.edu
-  office: 505 E Green St, No. 108 
-  office_hours: Tu 11-1 or by Appointment
+  office: Online!
+  office_hours: By appointment
 tas:
   -
-    name: Naveen Sathiyanathan 
-    email: nms9@illinois.edu
-    office: TBA
-    office_hours: TBA
+    name: Mohammad Amanzadeh
+    email: amanzad2@illinois.edu
+    office: Online!
+    office_hours: Wednesday, 2PM-3PM
 course:
   name: Data Visualization
-  number: IS590DV
-  semester: Fall, 2019
-  location: LIS 126
-  time: Wed 10AM-12:50PM
+  number: IS445 - BOU BOG
+  semester: Fall, 2020
+  location: Online
+  time: Tuesday and Thursday, 9:30AM-10:50AM
   credit_hours: 4
 urls:
   -
     name: Slack
-    url: https://is590dv-fall2019.slack.com/
+    url: https://is445-fall2020.slack.com/
   - 
-    name: Canvas
-    url: TBA
+    name: Moodle
+    url: https://learn.illinois.edu/course/view.php?id=50825
+  -
+    name: Course Materials
+    url: https://uiuc-ischool-dataviz.github.io/fall2020-BOG-BOU/
+  -
+    name: Github
+    url: https://github.com/UIUC-iSchool-DataViz/fall2020-BOG-BOU/

@@ -3,6 +3,18 @@ layout: syllabus
 title: Syllabus
 ---
 
+# COVID-19 Statement
+In keeping with University and iSchool policy, all students are required to engage in appropriate behavior to protect the health and safety of our community.  If you are on campus, this includes wearing a facial covering properly, maintaining social distance (at least 6 feet from others at all times), disinfecting the immediate seating area, and using hand sanitizer.
+
+If you feel ill or are unable to come to class or complete class assignments due to issues related to COVID-19, including but not limited to: testing positive yourself, feeling ill, caring for a family member with COVID-19, or having unexpected child-care obligations, should contact their instructor immediately and cc their advisor.
+
+Additionally, please be aware that there are mental health resources available to students:
+ * https://www.counselingcenter.illinois.edu/ 
+ * https://mckinley.illinois.edu/medical-services/mental-health 
+ * https://www.disability.illinois.edu/health/mental-health-resources 
+ 
+Finally, due to the current messiness of the COVID learning environment, we are allowing up to three late homeworks.  If you need to “use” one of your late homeworks email the instructor and/or the TA.  You do not need to provide any explanation for why you’d like to use one of your late homeworks.  You will then have until the end of the week -- the Sunday after the homework was due, midnight -- to turn in this assignment.  
+
 # Course Description
 
 Data visualization is crucial to conveying information drawn from models,
@@ -66,18 +78,70 @@ introduction to Python will be presented during the course.
 
 There is no textbook for this course.  All course materials will be posted to
 the GitHub repository at https://github.com/UIUC-iSchool-DataViz/fall2019 .
+**Optional** textbook [Visualization Analysis and Design by Tamara Munzner](https://www.amazon.com/gp/product/1466508914/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1).  You can find a lot of the concepts from this textbook on [the books webpage](https://www.cs.ubc.ca/~tmm/vadbook/) and the [associated lecture slides](https://www.cs.ubc.ca/~tmm/talks.html#vadallslides).
 
 As the course progresses, a list of recommended readings will be generated for
 each class.  These will be included in the course materials repository, and
 students are encouraged to fork that repository and issue pull requests to add
 suggested readings.
 
-Existing readings that may help are available in the file
-[readings.md](readings.md).
+# Writing Resources
 
-You will be expected to be at least basically conversant in several programming
-languages.  You can see more information in the [helpful
-setup](helpful_setup.md) guide.
+The iSchool Writing Resources is the in-house writing support team for graduate students at the iSchool.  They are here to help you with your writing and help you feel more comfortable and confident in your skills. The writing consultants are not professors or evaluators. They simply know the struggles of graduate and undergraduate-level writing and want to help you learn how to succeed and improve your writing skills. The iSchool writing consultants can help you with every step of the writing process. For detailed information on our services please visit our website:
+https://publish.illinois.edu/ischoolwritingresources/
+
+
+# Topic Calendar & Optional Reading
+
+Below is an approximate outline of the course and **optional** reading for each week.
+This course is always under development and  the
+course outline below is subject to some flexibility; students will be encouraged
+to provide feedback on the topics covered, particularly toward the end.  Topics
+that are of particular interest will be emphasized.
+
+**Optional texts:**
+ * <a href="https://www.amazon.com/Visualization-Analysis-Design-AK-Peters/dp/1466508914/ref=sr_1_2?crid=1WC409BVX1489&keywords=visualization+analysis+and+design&qid=1580082878&sprefix=visualization%2Caps%2C158&sr=8-2">Visualization Analysis & Design, Tamara Munzner</a>. You can find a lot of the concepts from this textbook on [the books webpage](https://www.cs.ubc.ca/~tmm/vadbook/) and the [associated lecture slides](https://www.cs.ubc.ca/~tmm/talks.html#vadallslides).
+ * Edward Tufte wrote a series of visualization books that are often thought of as foundational to the field.  These include <a href="https://www.amazon.com/Visual-Display-Quantitative-Information/dp/0961392142/ref=sr_1_1?keywords=edward+tufte+books&qid=1580082986&sr=8-1">The Visual Display of Quantitative Information</a>, <a href="https://www.amazon.com/Beautiful-Evidence-Edward-R-Tufte/dp/0961392177/ref=sr_1_2?keywords=edward+tufte+books&qid=1580082986&sr=8-2">Beautiful Evidence</a>, <a href="https://www.amazon.com/Envisioning-Information-Edward-R-Tufte/dp/0961392118/ref=sr_1_3?keywords=edward+tufte+books&qid=1580082986&sr=8-3">Envisioning Information</a>, and <a href="https://www.amazon.com/Visual-Explanations-Quantities-Evidence-Narrative/dp/0961392126/ref=sr_1_4?keywords=edward+tufte+books&qid=1580082986&sr=8-4">Visual Explanations: Images and Quantities, Evidence and Narrative<a>
+ * There is a free online book, <a href="https://serialmentor.com/dataviz/">Fundamentals of Data Visualization by Claus O. Wilke</a> that provies a lot of nice examples and serves as an intro to Tamara Munzner's book.  It has an <a href="https://serialmentor.com/dataviz/bibliography.html">annotated bibliography at the end</a> that gives a few references for books in data viz that include programming. It is built from the linked <a href="https://github.com/clauswilke/dataviz">GitHub repo</a>.  Note that this book is focused on static (not interactive) visualizations.
+ * Additional references will be added as needed.
+
+Acronyms for books:
+ * VAD: Visualization Analysis & Design
+ * FDV: Fundamentals of Data Visualization
+
+**Course Outline and *Optional* Reading List**
+
+<style>
+table th:first-of-type {
+    width: 10%;
+}
+table th:nth-of-type(2) {
+    width: 30%;
+}
+table th:nth-of-type(3) {
+    width: 60%;
+}
+</style>
+
+| Week   | Topic  |  Reading
+-------|-------------------|---------
+| Week 1 | Introduction, syllabus, examples, and some basics | 1. VAD, Ch. 1: What's Viz, and Why Do It? <br> 2. <a href                                                                                                                                                                                                                                                                                                                                                                                                   = "https://serialmentor.com/dataviz/introduction.html">FDV, Ch. 1: Introduction</a> & <a href                                                                                                                            = "https://serialmentor.com/dataviz/proportional-ink.html">FDV, Ch. 17: The principle of proportional ink</a> <br> 3. <a href                                                  = "https://medium.com/multiple-views-visualization-research-explained/same-data-multiple-perspectives-curse-of-knowledge-in-visual-data-communication-d827c381f936">Same Data, Multiple Perspectives</a> <br> 4. [Intro to Jupyter Notebook Video](https://www.youtube.com/watch?v = 3C9E2yPBw7s)
+| Week 2 | Data storage & Operations; Image data | 1. VAD, Ch. 2: What: Data Abstraction <br> 2. <a href                                                                                                                                                                                                                                                                                                                                                                                                                   = "https://serialmentor.com/dataviz/aesthetic-mapping.html">FDV, Ch. 2: Visualizing data: Mapping data onto aesthetics</a> <br> 3. VAD, Ch. 13: Reduce Items and Attributes <br> 4. <a href                              = "https://serialmentor.com/dataviz/image-file-formats.html">FDV, Ch. 27: Understanding the most commonly used image file formats</a> <br> 5. <a href                          = "https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-10-JSONandCSV.ipynb">IS452's intro to CSV files (bottom of page)</a> <br> 6. <a href                                                                                                                     = "https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-09-Dictionaries.ipynb">IS452's Intro to Dictionaries</a> <br> 7. <a href = "https://pandas.pydata.org/pandas-docs/stable/">Pandas Docs</a> & <a href                                       = "https://docs.scipy.org/doc/numpy/reference/">NumPy Docs</a>
+| Week 3 | Holiday!
+| Week 4 | Types of Viz and color, colormaps | 1. VAD, Ch. 10: Map Color and Other Channels <br> 2. <a href                                                                                                                                                                                                                                                                                                                                                                                                                = "https://serialmentor.com/dataviz/color-basics.html">FDV, Ch. 4: Color scales</a> <br> 3. VAD, Ch. 5: Marks and Channels <br> 4. <a href                                                                               = "https://www.csc2.ncsu.edu/faculty/healey/PP/">Perception in Visualization (pay extra attention to the parts about color)</a>  <br> 5. <a href                               = "https://jiffyclub.github.io/palettable/#documentation">Palettable Docs</a>
+| Week 5 | Beginning Interactivity | 1. <a href                                                                                                                                                                                                                                                                                                                                                                                                                                                                            = "https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Basics.html">Intro to ipywidgets</a> <br> 2. <a href                                                                                                    = "https://github.com/jupyter-widgets/ipywidgets/blob/master/docs/source/examples/Index.ipynb">Example Widgets Notebooks</a> <br> 3. VAD Ch. 7: Arrange Tables <br> 4. <a href = "https://serialmentor.com/dataviz/histograms-density-plots.html">FDV, Ch. 7: Visualizing distributions: Histograms and density plots</a>
+| Week 6 | Distributions, Engines |  1. <a href                                                                                                                                                                                                                                                                                                                                                                                                                                                                            = "https://www.youtube.com/watch?v                                                                                                                                                                                       = rraXF0EjRC8">Video about bqplot</a> <br> 2. <a href                                                                                                                          = "https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149">An introduction to Grammar of Graphics</a> <br> 3. <a href                                                                       = "https://ipywidgets.readthedocs.io/en/latest/">ipywidgets Docs</a>; <a href                                                                      = "https://traitlets.readthedocs.io/en/stable/">Traitlets Docs</a>; <a href                                       = "https://bqplot.readthedocs.io/en/latest/">bqplot Docs</a>
+| Week 7 | Dashboards & Maps with bqplot | 1. VAD Ch. 8.1-8.3: Arrange Spatial Data <br> 2. VAD Ch. 11.1-11.5: Manipulate View <br> 3. <a href                                                                                                                                                                                                                                                                                                                                                                             = "https://serialmentor.com/dataviz/geospatial-data.html">FDV, Ch. 15: Visualizing geospatial data</a>
+| Week 8 | More with maps - bqplot, cartopy, ipyleaflet, geopandas | 1. VAD Ch. 8.1-8.3: Arrange Spatial Data <br> 2. <a href                                                                                                                                                                                                                                                                                                                                                                                              = "https://serialmentor.com/dataviz/geospatial-data.html">FDV, Ch. 15: Visualizing geospatial data</a> <br> 3. VAD, Ch. 13.4.2: Reduce Items and Attributes <br> 4. <a href                                              = "https://scitools.org.uk/cartopy/docs/latest/">Cartopy docs</a>; <a href                                                                                                     = "https://ipyleaflet.readthedocs.io/en/latest/">ipyleaflet docs</a>; <a href                                                                                                                                                                                                      = "https://geopandas.org/">Geopandas Docs</a>
+| Week 9 | Designing for the web with Python & Javascript with Iodide | 1. <a href                                                                                                                                                                                                                                                                                                                                                                                                                                         = "https://alpha.iodide.io/">Iodide Docs</a> - in particular: <a href                                                                                                                                                    = "https://iodide-project.github.io/docs/key_concepts/">key concepts</a> & <a href                                                                                             = "https://iodide-project.github.io/docs/iomd/">IOMD format</a> <br> 2. <a href                                                                                                                                                                                                    = "https://www.codecademy.com/learn/introduction-to-javascript">Intro to Javascript</a> <br> 3. <a href                                            = "https://serialmentor.com/dataviz/directory-of-visualizations.html">FDV, Ch. 5: Directory of visualizations</a>
+| Week 10 | Designing for the web with Python & Javascript, Web dev with Iodide; Considering your audience | 1. <a href                                                                                                                                                                                                                                                                                                                                                                                                    = "https://medium.com/multiple-views-visualization-research-explained/same-data-multiple-perspectives-curse-of-knowledge-in-visual-data-communication-d827c381f936">Same Data, Multiple Perspectives</a> <br> 2. <a href = "https://serialmentor.com/dataviz/telling-a-story.html">FDV, Ch. 29: Telling a story and making a point</a> <br> 3. <a href                                                  = "https://alpha.iodide.io/">Iodide Docs</a> <br> 4. <a href                                                                                                                                                                                                                       = "https://vega.github.io/vega-lite/docs/">vega-lite docs</a> - in particular: <a href                                                             = "https://vega.github.io/vega-lite/docs/transform.html">Vega-lite transformations</a> & <a href                  = "https://vega.github.io/vega-lite/docs/selection.html">Vega-lite selections</a> <br> 5. <a href = "https://idyll-lang.org/docs"> Idyll Docs</a>
+| Week 11 | More javascript & web dev with Idyll  | 1. <a href                                                                                                                                                                                                                                                                                                                                                                                                                                                             = "https://idyll-lang.org/docs"> Idyll Docs</a> - in particular: <a href                                                                                                                                                 = "https://idyll-lang.org/docs/components">Built in</a>/<a href                                                                                                                = "https://idyll-lang.org/docs/components/npm">npm installed</a> components
+| Week 12 | More with Idyll, Publishing Viz | 1. <a href                                                                                                                                                                                                                                                                                                                                                                                                                                                                   = "https://idyll-lang.org/docs"> Idyll Docs</a>
+| Week 13 | Idyll + d3.js | 1. <a href                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     = "https://github.com/d3/d3/wiki">d3.js docs</a>
+| Week 14 | Holiday!
+| Week 15 | Scientific visualization <br> <br> Guest lecture about scientific & cinematic viz from <a href                                                                                                                                                                                                                                                                                                                                                                                                                 = "http://avl.ncsa.illinois.edu/">AVL</a> |  1. VAD Ch. 8.4-8.6: Arrange Spatial Data <br> 2. VAD Ch. 11.6: Manipulate View <br> 3. <a href                                                                              = "https://yt-project.org/">yt docs</a> <br> 4. <a href                                                                                                                        = "https://yt-project.org/doc/visualizing/volume_rendering.html">yt Volume Rendering Tutorial</a>
+| Week 16 | Network Viz & Word cloud Viz; Class summary | 1. VAD Ch. 9: Arrange Networks and Trees <br> 2. VAD, Ch. 13.4.3.1: Reduce Items and Attributes <br> 3. VAD, Ch. 6: Rules of Thumb <br> 4. [FDV, Ch. 28: Choosing the right visualization software](https://serialmentor.com/dataviz/choosing-visualization-software.html) <br> 5. [FDV, Ch. 26: Don't go 3D](https://serialmentor.com/dataviz/no-3d.html) <br> 6. [FDV, Ch. 25: Avoid line drawings](https://serialmentor.com/dataviz/avoid-line-drawings.html)
+
 
 # About Your Instructor
 
@@ -104,48 +168,44 @@ iSchool writing coaches also offer free consultations.
 
 # Academic Integrity
 
-Please review and reflect on the academic integrity policy of the University of Illinois,
-<http://admin.illinois.edu/policy/code/article1_part4_1-401.html> to which we subscribe.
-By turning in materials for review, you certify that all work presented is your own and
-has been done by you independently, or as a member of a designated group for group assignments.
-If, in the course of your writing, you use the words or ideas of another writer, proper
-acknowledgment must be given (using APA, Chicago, or MLA style). Not to do so is to commit
-plagiarism, a form of academic dishonesty. If you are not absolutely clear on what constitutes
-plagiarism and how to cite sources appropriately, now is the time to learn. Please ask me!
-Please be aware that the consequences for plagiarism or other forms of academic dishonesty
-will be severe. Students who violate university standards of academic integrity are
-subject to disciplinary action, including a reduced grade, failure in the course, and
-suspension or dismissal from the University.
+Please review and reflect on the academic integrity policy of the University of Illinois, http://studentcode.illinois.edu/article1_part4_1-401.html, to which we subscribe. By turning in materials for review, you certify that all work presented is your own and has been done by you independently, or as a member of a designated group for group assignments. 
+
+If, in the course of your writing, you use the words or ideas of another writer, proper acknowledgement must be given (using APA, Chicago, or MLA style). Not to do so is to commit plagiarism, a form of academic dishonesty. If you are not absolutely clear on what constitutes plagiarism and how to cite sources appropriately, now is the time to learn. Please ask me!
+
+Please be aware that the consequences for plagiarism or other forms of academic dishonesty will be severe. Students who violate university standards of academic integrity are subject to disciplinary action, including a reduced grade, failure in the course, and suspension or dismissal from the University.
+
+Criteria for grading homework assignments include (but are not limited to) creativity and the amount of original work demonstrated in the assignment. However, students are permitted to use and adapt the work of others, provided that the following guidelines are followed:
+ * Use of other people’s material must not infringe the copyright of the original author, nor violate the terms of any licensing agreement. Know and respect the principles of fair use with respect to copyrighted material.
+ * Students must scrupulously attribute the original source and author of whatever material has been adapted for the assignment. Summarize the changes or adaptations that have been made. Make plain how much of the assignment represents original work.
 
 # Statement of Inclusion
 
-[Inclusive Illinois Committee Diversity Statement](http://www.inclusiveillinois.illinois.edu/supporting_docs/Inclusive%20Illinois%20Diversity%20Statement.pdf)
+[Review the statement](http://www.inclusiveillinois.illinois.edu/mission.html).
 
-As the state's premier public university, the University of Illinois
-at Urbana-Champaign's core mission is to serve the interests of the
-diverse people of the state of Illinois and beyond. The institution
-thus values inclusion and a pluralistic learning and research
-environment, one which we respect the varied perspectives and lived
-experiences of a diverse community and global workforce. We support
-diversity of worldviews, histories, and cultural knowledge across a
-range of social groups including race, ethnicity, gender identity,
-sexual orientation, abilities, economic class, religion, and their
-intersections.
+As the state’s premier public university, the University of Illinois at Urbana-Champaign’s core mission is to serve the interests of the diverse people of the state of Illinois and beyond. The institution thus values inclusion and a pluralistic learning and research environment, one which we respect the varied perspectives and lived experiences of a diverse community and global workforce. We support diversity of worldviews, histories, and cultural knowledge across a range of social groups including race, ethnicity, gender identity, sexual orientation, abilities, economic class, religion, and their intersections.
+
 
 # Accessibility Statement
-To obtain accessibility-related academic adjustments and/or auxiliary
-aids, students with disabilities must contact the course instructor
-and the [Disability Resources and Educational Services](http://disability.illinois.edu/) (DRES) as soon
-as possible.  To contact DRES you may visit 1207 S. Oak St.,
-Champaign, call (217) 333-4603 (V/TTY), or e-mail a message to
-disability@illinois.edu.
+
+To obtain accessibility-related academic adjustments and/or auxiliary aids, students with disabilities must contact the course instructor and the  [Disability Resources and Educational Services](http://disability.illinois.edu/) (DRES) as soon as possible. To contact DRES you may visit 1207 S. Oak St., Champaign, call 333-4603 (V/TTY), or e-mail a message to disability@uiuc.edu.  
+
+This syllabus may be obtained in alternative formats upon request. Please contact the instructor.
+
 
 # Assignments and Evaluation
 
-Students will be graded based on a combination of assignments (70%) and a final
+Students will be graded based on a combination of assignments (70%: 40% standard prose/code assignments and
+30% weekly visualization reports) and a final
 project (30%).  The final project will be a capstone to the course, and will
 have greater flexibility in software packages and data sources.  This project
 will be introduced in Week 8.
+
+**In summary, your grades consist of:**
+
+| 40% | Standard assignments in prose or code form
+| 30% | Weekly visualization reports
+| 30% | Final project
+
 
 Assignments in this course will be a mixture of coding/visualization work and
 written work.  These two may not be distinct assignments; students will be
@@ -176,19 +236,21 @@ be collected electronically.
 The submission process for homeworks will be described by example during class
 before any homeworks are to be submitted.
 
-Each assignment will be 50% "correctness" and 50% the narrative description of
+Each assignment will be based on "correctness" and the narrative description of
 the process.  "Correctness" in this case indicates that the code runs without
 issue, results are produced, and each component of the assignment is completed.
-The narrative description of the process will be graded on grammar and
-completeness.
+The narrative description of the process will be graded on grammar minimally and
+more so on completeness and thoughtfulness.
 
 ### Grading Policy
 
-All assignments are required for all students. Completing all assignments is
-not a guarantee of a passing grade.  All work must be completed in order to
-pass this class. Late or incomplete assignments will not be given full credit
+All assignments are required for all students, aside from one homework (lowest HW grade will be dropped). 
+Completing all assignments is
+not a guarantee of a passing grade.  You must do homework, visualization reports, and final to 
+receive a passing grade. Late or incomplete assignments will not be given full credit
 unless the student has contacted the instructor prior to the due date of the
 assignment (or in the case of emergencies, as soon as practicable).
+
 
 **Grading Scale:**
 
@@ -221,27 +283,6 @@ must notify the instructor and TA in advance and request an excused absence.
 Participation in class -- in the form of comments, questions, and discussion --
 is expected.
 
-# Semester Calendar
-
-This is the first semester that this course is being taught.  As such, the
-course outline below is subject to some flexibility; students will be encouraged
-to provide feedback on the topics covered, particularly toward the end.  Topics
-that are of particular interest will be emphasized.
-
- * Week 1: Introduction, syllabus, examples, and some basics
- * Week 2: Operational palette, structured python, and files
- * Week 3: Quantitative plots, plot components
- * Week 4: Histograms and distributions
- * Week 5: R and ggplot
- * Week 6: Images: color, colormaps
- * Week 7: Comparisons between datasets
- * Week 8: Comparisons between different datasets
- * Week 9: Network visualization
- * Week 10: Principles of interactive visualization
- * Week 11: Interactive visualization with Python
- * Week 12: Scientific visualization
- * Week 13: Advanced topics
- * Week 14: Group presentations
 
 ## Emergency Response: Run, Hide, Fight
 
@@ -297,3 +338,4 @@ assistance in emergency situations.
   Illini-Alert text messages.
 - Follow the University of Illinois Police Department on Twitter and
   Facebook to get regular updates about campus safety.
+
