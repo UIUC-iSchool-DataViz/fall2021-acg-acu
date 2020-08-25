@@ -6,8 +6,6 @@ layout: lecture
 
 # Data Visualization
 
-<div style="height: 6.0em;"></div>
-
 ## Matthew Turk
 ## Fall 2020 - BOU/BOG
 
