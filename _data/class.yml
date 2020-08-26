@@ -29,3 +29,7 @@ urls:
   -
     name: Github
     url: https://github.com/UIUC-iSchool-DataViz/fall2020-BOG-BOU/
+coursework_site:
+  name: Moodle
+  url: https://learn.illinois.edu/course/view.php?id=50825
+  faicon: fa-school

@@ -1,28 +1,70 @@
 ---
 layout: default
 ---
+<section class="section">
+    <div class="container">
+
 <h1>{{site.title}}</h1>
 
 {{ content }}
 
-<p><a href="{{'syllabus.html' | relative_url}}">Course syllabus</a></p>
+    </div>
+</section>
 
-<h2>Weekly Lectures and Materials</h2>
 
-<ul>
+<section class="section">
+    <div class="container">
+        <h1>Weekly Lectures and Materials</h1>
+<table class="table">
+    <tbody>
 {% assign sorted_pages = site.html_pages | sort:"path" %}
 {% for f in sorted_pages %}
-{% if f.dir contains "week" and f.path contains "index" and f.visible %}
-<li><a href="{{f.url | relative_url }}">{{f.title}}</a></li>
+{% if f.dir contains "week" and f.path contains "index" %}
+{% assign tags = "" | split: ", " %}
+<tr>
+    <td>
+        <a href="{{f.url | relative_url }}">{{f.title}}</a>
+    </td>
+    <td>
+        {% comment %}accidentally quadratic on purpose{% endcomment %}
+        {% for subpage in sorted_pages %}
+        {% if subpage.dir == f.dir %}
+        <p><a href="{{subpage.url | relative_url }}">{{ subpage.title }}</a></p>
+        {% assign tags = tags | concat: subpage.tags %}
+        {% endif %}
+        {% endfor %}
+    </td>
+    <td>
+        {% assign tags = tags | uniq %}
+        {% for tag in tags %}
+        <span class="tag">
+            {{tag}}
+        </span>
+        {% endfor %}
+    </td>
+</tr>
 {% endif %}
 {% endfor %}
-</ul>
+    </tbody>
+</table>
 
-<h2>Assignments</h2>
-<ul>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+    <h1>Assignments</h1>
 {% for f in sorted_pages %}
 {% if f.dir contains "assignments" and f.path contains "assignment" %}
-<li><a href="{{f.url | relative_url }}">{{f.title}}</a> - Due {{f.due}}</li>
+<div class="columns">
+    <div class="column is-one-quarter">
+        <a href="{{f.url | relative_url }}">{{f.title}}</a>
+    </div>
+    <div class="column">
+        Due {{f.due}}
+    </div>
+</div>
 {% endif %}
 {% endfor %}
-</ul>
+    </div>
+</section>

@@ -48,3 +48,8 @@ defaults:
       path: "lecture*.md"
     values:
       layout: "lecture.html"
+  -
+    scope:
+      path: ""
+    values:
+      tags: []

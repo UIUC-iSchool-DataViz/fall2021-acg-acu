@@ -3,7 +3,7 @@ layout: week
 visible: true
 ---
 
-# Week 1 - Introduction
+# Introduction
 
 This week, we went over the structure of the course, as well as some basics of
 why we visualize, who we visualize for, and how to think about our relationship

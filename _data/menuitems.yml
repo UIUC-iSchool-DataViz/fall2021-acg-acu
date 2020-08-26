@@ -1,0 +1,16 @@
+- name: Lectures
+  faicon: fa-chalkboard-teacher
+  url: /lectures
+  weight: 10
+- name: Examples
+  url: /examples
+  faicon: fa-chart-line
+  weight: 30
+- name: Assignments
+  url: /assignments
+  faicon: fa-pencil-ruler
+  weight: 20
+- name: Syllabus
+  url: /syllabus
+  faicon: fa-book
+  weight: 40
