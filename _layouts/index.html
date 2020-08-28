@@ -4,7 +4,10 @@ layout: default
 <section class="section">
     <div class="container">
         <div class="columns">
-            <div class="column is-two-thirds"><h1>{{site.title}}</h1></div>
+            <div class="column is-two-thirds">
+                <h1>{{site.title}}</h1>
+                {{ content }}
+            </div>
             <div class="column">
                 <figure class="image">
                     <img src='{{"/assets/undraw/undraw_visual_data_b1wx.svg" | relative_url}}'>
@@ -12,7 +15,6 @@ layout: default
             </div>
         </div>
 
-{{ content }}
 
     </div>
 </section>
@@ -22,12 +24,14 @@ layout: default
 <section class="section">
     <div class="container">
         <h1>Weekly Lectures and Materials</h1>
+        <hr/>
 {% assign sorted_pages = site.html_pages | sort:"path" %}
 {% for f in sorted_pages %}
 {% if f.dir contains "week" and f.path contains "index" %}
 {% assign tags = "" | split: ", " %}
 {% assign subpages = sorted_pages | where: "dir", f.dir %}
 {% assign lectures = subpages | where: "layout", "lecture" | sorted: "date" %}
+{% assign assignments = subpages | where: "layout", "assignment" | sorted: "date" %}
 {% for subpage in subpages %}
 {% assign tags = tags | concat: subpage.tags %}
 {% endfor %}
@@ -37,7 +41,9 @@ layout: default
         <div class="has-text-centered">
             <figure class="image">
             {% if f.icon %}
-            <img src="{{ '/assets/undraw/' | append: f.icon | relative_url }}">
+                <a href="{{f.url | relative_url }}">
+                    <img src="{{ '/assets/undraw/' | append: f.icon | relative_url }}">
+                </a>
             {% endif %}
         </figure>
             <p>
@@ -53,7 +59,6 @@ layout: default
         </div>
     </div>
     <div class="column">
-        {% comment %}accidentally quadratic on purpose{% endcomment %}
         {% for lecture in lectures %}
         <article class="media">
             <figure class="media-left">
@@ -61,6 +66,16 @@ layout: default
             </figure>
             <div class="media-content">
                 <a href="{{lecture.url | relative_url }}">{{ lecture.title }}</a> - {{ lecture.description }}</p>
+            </div>
+        </article>
+        {% endfor %}
+        {% for assignment in assignments %}
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon"><i class="fas fa fa-pencil-ruler"></i></span>
+            </figure>
+            <div class="media-content">
+                <a href="{{assignment.url | relative_url }}">{{ assignment.title }}</a> - {{ assignment.description }}</p>
             </div>
         </article>
         {% endfor %}

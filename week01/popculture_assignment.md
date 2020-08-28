@@ -1,4 +1,28 @@
-# Example Submission
+---
+title: Pop Culture Visualizations
+layout: assignment
+description: Find and analyze viz in pop culture
+---
+
+This assignment is designed to help you start thinking critically about the
+visualizations we see every day, and to start examining the ways that data can
+be presented in our daily lives.
+
+ * Identify three visualizations in pop culture -- *not* academic literature.
+   This could be, for instance, from:
+   * Movies / TV / Music videos
+   * Everyday life
+   * Advertisements
+ * Describe each one in detail
+   * Where did the data come from?
+   * Is the data quantitative, qualitative, categorical, etc?
+   * How was the data processed before being displayed?
+   * What method was used to display that data?
+ * Replicate the visualization with different, but similarly “shaped,” data
+   * By hand is acceptable
+   * Computational methods should include source code
+
+## Example Submission
 
 This visualization is from the movie Alien (1979), directed by Ridley Scott.
 

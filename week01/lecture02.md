@@ -1,5 +1,5 @@
 ---
-title: Lecture 2
+title: Why and How Do We Visualize?
 layout: lecture
 tags:
   - concepts
@@ -9,14 +9,6 @@ description: >-
   describe the process of making choices, understanding our audience, and so
   forth?
 date: 2020-08-27 
----
-<!-- .slide: class="titleslide" -->
-
-# Data Visualization
-
-## Matthew Turk
-## Fall 2020 - BOU/BOG
-
 ---
 
 # Why?
@@ -174,11 +166,12 @@ even without the logo.
 
 ## Anscombe's Quartet
 
-<!-- .slide: data-background-image="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/1280px-Anscombe%27s_quartet_3.svg.png" data-background-size="auto 50%" -->
-
 This famous example shows 4 datasets with the exact same mean, variance and correlation coefficient.
 
 Statistics can be useful, but visualization generated context!
+
+<a title="Anscombe.svg: Schutz
+(label using subscripts): Avenue / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Anscombe%27s_quartet_3.svg"><img width="768px" alt="Anscombe&#039;s quartet 3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/1000px-Anscombe%27s_quartet_3.svg.png"></a>
 
 ---
 

@@ -9,14 +9,6 @@ description: >-
   visualizations are, and how to orient yourself in the course.
 date: 2020-08-25
 ---
-<!-- .slide: class="titleslide" -->
-
-# Data Visualization
-
-## Matthew Turk
-## Fall 2020 - BOU/BOG
-
----
 
 ## Land Acknowledgment
 
