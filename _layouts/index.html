@@ -21,11 +21,11 @@ layout: default
 
 <section class="section">
     <div class="container">
-        <h1>Weekly Lectures and Materials</h1>
+        <h1>Lectures and Materials</h1>
         <hr/>
 {% assign sorted_pages = site.html_pages | sort:"path" %}
-{% for f in sorted_pages %}
-{% if f.dir contains "week" and f.path contains "index" and f.visible %}
+{% assign week_pages = sorted_pages | where: "layout", "week" | where: "visible", true %}
+{% for f in week_pages %}
 {% assign tags = "" | split: ", " %}
 {% assign subpages = sorted_pages | where: "dir", f.dir %}
 {% assign lectures = subpages | where: "layout", "lecture" | sorted: "date" %}
@@ -38,7 +38,7 @@ layout: default
     <div class="column is-one-quarter">
         <div class="has-text-centered">
             <h2 class="subtitle">
-                <a href="{{f.url | relative_url }}">{{f.title}}</a>
+				Week {{forloop.index}}
             </h2>
             <figure class="image">
             {% if f.icon %}
@@ -47,14 +47,17 @@ layout: default
                 </a>
             {% endif %}
         </figure>
-            <p>
-                {% for tag in tags %}
-                <span class="tag" data-tag="{{tag}}">
-                    {{tag}}
-                </span>
-                {% endfor %}
-            </p>
-        </div>
+		<h3 class="subtitle">
+            <a href="{{f.url | relative_url }}">{{f.title}}</a>
+		</h3>
+		<p>
+			{% for tag in tags %}
+			<span class="tag" data-tag="{{tag}}">
+				{{tag}}
+			</span>
+			{% endfor %}
+		</p>
+		</div>
     </div>
     <div class="column">
         {% for lecture in lectures %}
@@ -101,7 +104,6 @@ layout: default
     </div>
 </div>
 <hr/>
-{% endif %}
 {% endfor %}
     </div>
 </section>
