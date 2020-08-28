@@ -1,9 +1,14 @@
 ---
-title: Lecture 1
+title: Lecture 2
 layout: lecture
 tags:
   - concepts
   - brain
+description: >-
+  What are some of the basics of how we interpret visualizations?  How can we
+  describe the process of making choices, understanding our audience, and so
+  forth?
+date: 2020-08-27 
 ---
 <!-- .slide: class="titleslide" -->
 

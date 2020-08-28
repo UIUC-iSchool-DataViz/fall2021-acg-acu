@@ -3,54 +3,79 @@ layout: default
 ---
 <section class="section">
     <div class="container">
-
-<h1>{{site.title}}</h1>
+        <div class="columns">
+            <div class="column is-two-thirds"><h1>{{site.title}}</h1></div>
+            <div class="column">
+                <figure class="image">
+                    <img src='{{"/assets/undraw/undraw_visual_data_b1wx.svg" | relative_url}}'>
+                </figure>
+            </div>
+        </div>
 
 {{ content }}
 
     </div>
 </section>
 
+<hr/>
 
 <section class="section">
     <div class="container">
         <h1>Weekly Lectures and Materials</h1>
-<table class="table">
-    <tbody>
 {% assign sorted_pages = site.html_pages | sort:"path" %}
 {% for f in sorted_pages %}
 {% if f.dir contains "week" and f.path contains "index" %}
 {% assign tags = "" | split: ", " %}
-<tr>
-    <td>
-        <a href="{{f.url | relative_url }}">{{f.title}}</a>
-    </td>
-    <td>
+{% assign subpages = sorted_pages | where: "dir", f.dir %}
+{% assign lectures = subpages | where: "layout", "lecture" | sorted: "date" %}
+{% for subpage in subpages %}
+{% assign tags = tags | concat: subpage.tags %}
+{% endfor %}
+{% assign tags = tags | uniq %}
+<div class="columns">
+    <div class="column is-one-quarter">
+        <div class="has-text-centered">
+            <figure class="image">
+            {% if f.icon %}
+            <img src="{{ '/assets/undraw/' | append: f.icon | relative_url }}">
+            {% endif %}
+        </figure>
+            <p>
+                <a href="{{f.url | relative_url }}">{{f.title}}</a>
+            </p>
+            <p>
+                {% for tag in tags %}
+                <span class="tag">
+                    {{tag}}
+                </span>
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+    <div class="column">
         {% comment %}accidentally quadratic on purpose{% endcomment %}
-        {% for subpage in sorted_pages %}
-        {% if subpage.dir == f.dir %}
-        <p><a href="{{subpage.url | relative_url }}">{{ subpage.title }}</a></p>
-        {% assign tags = tags | concat: subpage.tags %}
-        {% endif %}
+        {% for lecture in lectures %}
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon"><i class="fas fa fa-chalkboard-teacher"></i></span>
+            </figure>
+            <div class="media-content">
+                <a href="{{lecture.url | relative_url }}">{{ lecture.title }}</a> - {{ lecture.description }}</p>
+            </div>
+        </article>
         {% endfor %}
-    </td>
-    <td>
-        {% assign tags = tags | uniq %}
-        {% for tag in tags %}
-        <span class="tag">
-            {{tag}}
-        </span>
-        {% endfor %}
-    </td>
-</tr>
+    </div>
+</div>
 {% endif %}
 {% endfor %}
-    </tbody>
-</table>
-
     </div>
 </section>
 
+<hr/>
+
+{% comment %}
+#0B849A is the color from undraw.co that I used
+{% endcomment %}
 <section class="section">
     <div class="container">
     <h1>Assignments</h1>

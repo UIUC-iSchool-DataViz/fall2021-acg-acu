@@ -1,6 +1,7 @@
 ---
 layout: week
 visible: true
+icon: undraw_data_trends_b0wg.svg
 ---
 
 # Introduction

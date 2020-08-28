@@ -1,9 +1,13 @@
 ---
-title: Lecture 1
+title: Class Introduction
 layout: lecture
 tags:
   - overview
   - concepts
+description: >-
+  The syllabus for the course, along with discussions about "what"
+  visualizations are, and how to orient yourself in the course.
+date: 2020-08-25
 ---
 <!-- .slide: class="titleslide" -->
 
