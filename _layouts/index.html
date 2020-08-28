@@ -40,6 +40,9 @@ layout: default
 <div class="columns">
     <div class="column is-one-quarter">
         <div class="has-text-centered">
+            <h2 class="subtitle">
+                <a href="{{f.url | relative_url }}">{{f.title}}</a>
+            </h2>
             <figure class="image">
             {% if f.icon %}
                 <a href="{{f.url | relative_url }}">
@@ -47,9 +50,6 @@ layout: default
                 </a>
             {% endif %}
         </figure>
-            <p>
-                <a href="{{f.url | relative_url }}">{{f.title}}</a>
-            </p>
             <p>
                 {% for tag in tags %}
                 <span class="tag">
@@ -63,21 +63,20 @@ layout: default
         {% for lecture in lectures %}
         <article class="media">
             <figure class="media-left">
-                <span class="icon"><i class="fas fa fa-chalkboard-teacher"></i></span>
+                <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
             </figure>
             <div class="media-content">
-                <a href="{{lecture.url | relative_url }}">{{ lecture.title }}</a> - {{ lecture.description }}</p>
+                <p><a href="{{lecture.url | relative_url }}">{{ lecture.title }}</a></p><p>{{ lecture.description}}</p>
             </div>
         </article>
         {% endfor %}
+        <hr/>
         <nav class="level">
         {% for assignment in assignments %}
         <div class="level-item has-text-centered">
             <div>
                 <p>
-                    <h1 class="title">
-                    <span class="icon"><i class="fas fa-pencil-ruler"></i></span>
-                    </h1>
+                    <span class="icon is-large"><i class="fas fa-2x fa-pencil-ruler"></i></span>
                 </p>
                 <p>
                     <a href="{{assignment.url | relative_url }}">{{ assignment.title }}</a>
@@ -93,13 +92,12 @@ layout: default
         {% if nb.path contains f.dir %}
         <div class="level-item has-text-centered">
             <div>
-                <p class="heading">
-                    <span class="icon"><i class="fas fa fa-chart-line"></i></span>
+                <p>
+                        <span class="icon is-large"><i class="fas fa-2x fa-chart-line"></i></span>
                 </p>
                 <p>
-                {{nb.basename | replace: "_", " " | capitalize }}
-                (<a href="nbv.html?notebook_name={{nb.path | relative_url | url_encode }}">view</a>,
-                <a href="{{nb.path | relative_url}}">download</a>)</li>
+                <a href="nbv.html?notebook_name={{nb.path | relative_url | url_encode }}">{{nb.basename | replace: "_", " " | capitalize }}</a>
+                (<a href="{{nb.path | relative_url}}">download</a>)
                 </p>
             </div>
         </div>
