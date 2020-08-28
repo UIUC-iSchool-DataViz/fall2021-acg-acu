@@ -2,30 +2,69 @@
 layout: default
 ---
 
-        {{content}}
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-two-thirds">
+                {{ content }}
+            </div>
+            <div class="column">
+                {% if page.icon %}
+                <figure class="image">
+                    <img src="{{ '/assets/undraw/' | append: page.icon | relative_url}}">
+                </figure>
+                {% endif %}
+            </div>
+        </div>
 
-        <h3>Materials</h3>
-        <ul>
-        {% for f in site.html_pages %}
-        {% if f.dir contains page.dir and page.url != f.url %}
-        <li>{{f.title}}: (<a href="{{f.url | relative_url}}">view</a>,
-          <a href="{{ site.github.repository_url }}/blob/{{site.branch}}/{{f.path}}">source</a>)</li>
-        {% endif %}
+
+    </div>
+</section>
+
+{% assign subpages = site.html_pages | where: "dir", page.dir %}
+{% assign lectures = subpages | where: "layout", "lecture" | sorted: "date" %}
+{% assign assignments = subpages | where: "layout", "assignment" %}
+<section class="section">
+    <div class="container">
+        <h2 class="subtitle">Lectures</h2>
+        {% for lecture in lectures %}
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chalkboard-teacher"></i></span>
+            </figure>
+            <div class="media-content">
+                <p><a href="{{lecture.url | relative_url }}">{{ lecture.title }}</a></p><p>{{ lecture.description}}</p>
+            </div>
+        </article>
         {% endfor %}
-        {% assign pdfs = site.static_files | where: "extname", ".pdf" %}
-        {% for pdf in pdfs %}
-        {% if pdf.path contains page.dir %}
-        <li>PDF {{pdf.basename}}: 
-         (<a href="{{pdf.path | relative_url }}">view</a>
-        </li>
-        {% endif %}
+        <h2 class="subtitle">Examples</h2>
+        {% for example in page.examples %}
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-chart-line"></i></span>
+            </figure>
+            <div class="media-content">
+                <p>
+                    {% if example.type == "ipynb" %}
+                    <a href="../nbv.html?notebook_name={{example.filename | relative_url | url_encode }}">{{example.title}}</a> - (<a href="{{example.filename | relative_url}}">download</a>)
+                    {% else %}
+                    <a href="{{example.filename | relative_url }}">{{example.title}}</a>
+                    {% endif %}
+                </p>
+                <p>
+                    {{example.description}}
+                </p>
+            </div>
+        </article>
         {%endfor%}
-        {% assign notebooks = site.static_files | where: "extname", ".ipynb" %}
-        {% for nb in notebooks %}
-        {% if nb.path contains page.dir %}
-        <li>Notebook {{nb.basename}}: 
-         (<a href="../nbv.html?notebook_name={{nb.path | relative_url | url_encode }}">view</a>,
-         <a href="{{nb.path | relative_url}}">download</a>)</li>
-        {% endif %}
-        {%endfor%}
-        </ul>
+        <h2 class="subtitle">Assignments</h2>
+        {% for assignment in assignments %}
+        <article class="media">
+            <figure class="media-left">
+                <span class="icon is-large"><i class="fas fa-3x fa-pencil-ruler"></i></span>
+            </figure>
+            <div class="media-content">
+                <p><a href="{{assignment.url | relative_url }}">{{ assignment.title }}</a></p><p>{{ assignment.description}}</p>
+            </div>
+        </article>
+        {% endfor %}

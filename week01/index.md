@@ -2,6 +2,12 @@
 layout: week
 visible: true
 icon: undraw_data_trends_b0wg.svg
+notitle: true
+examples:
+  - filename: lecture02_examples.ipynb
+    type: ipynb
+    title: Markdown and Jupyter Examples
+    description: A handful of cells showing some markdown and how to execute in Jupyter notebooks
 ---
 
 # Introduction

@@ -19,16 +19,13 @@ layout: default
     </div>
 </section>
 
-<hr/>
-
 <section class="section">
     <div class="container">
         <h1>Weekly Lectures and Materials</h1>
         <hr/>
 {% assign sorted_pages = site.html_pages | sort:"path" %}
-{% assign all_notebooks = site.static_files | where: "extname", ".ipynb" | sorted %}
 {% for f in sorted_pages %}
-{% if f.dir contains "week" and f.path contains "index" %}
+{% if f.dir contains "week" and f.path contains "index" and f.visible %}
 {% assign tags = "" | split: ", " %}
 {% assign subpages = sorted_pages | where: "dir", f.dir %}
 {% assign lectures = subpages | where: "layout", "lecture" | sorted: "date" %}
@@ -52,7 +49,7 @@ layout: default
         </figure>
             <p>
                 {% for tag in tags %}
-                <span class="tag">
+                <span class="tag" data-tag="{{tag}}">
                     {{tag}}
                 </span>
                 {% endfor %}
@@ -71,9 +68,9 @@ layout: default
         </article>
         {% endfor %}
         <hr/>
-        <nav class="level">
+        <div class="columns">
         {% for assignment in assignments %}
-        <div class="level-item has-text-centered">
+        <div class="column has-text-centered">
             <div>
                 <p>
                     <span class="icon is-large"><i class="fas fa-2x fa-pencil-ruler"></i></span>
@@ -84,52 +81,26 @@ layout: default
             </div>
         </div>
         {% endfor %}
-        {% for nb in all_notebooks %}
-        {% comment %}
-        I don't know how to avoid this, since static files don't have a dir
-        attribute 
-        {% endcomment %}
-        {% if nb.path contains f.dir %}
-        <div class="level-item has-text-centered">
+        {% for example in f.examples %}
+        <div class="column has-text-centered">
             <div>
                 <p>
-                        <span class="icon is-large"><i class="fas fa-2x fa-chart-line"></i></span>
+                    <span class="icon is-large"><i class="fas fa-2x fa-chart-line"></i></span>
                 </p>
                 <p>
-                <a href="nbv.html?notebook_name={{nb.path | relative_url | url_encode }}">{{nb.basename | replace: "_", " " | capitalize }}</a>
-                (<a href="{{nb.path | relative_url}}">download</a>)
+                    {% if example.type == "ipynb" %}
+                    <a href="nbv.html?notebook_name={{example.filename | relative_url | url_encode }}">{{example.title}}</a>
+                    {% else %}
+                    <a href="{{example.filename | relative_url }}">{{example.title}}</a>
+                    {% endif %}
                 </p>
             </div>
         </div>
-        {% endif %}
         {% endfor %}
-        </nav>
+        </div>
     </div>
 </div>
 <hr/>
-{% endif %}
-{% endfor %}
-    </div>
-</section>
-
-<hr/>
-
-{% comment %}
-#0B849A is the color from undraw.co that I used
-{% endcomment %}
-<section class="section">
-    <div class="container">
-    <h1>Assignments</h1>
-{% for f in sorted_pages %}
-{% if f.dir contains "assignments" and f.path contains "assignment" %}
-<div class="columns">
-    <div class="column is-one-quarter">
-        <a href="{{f.url | relative_url }}">{{f.title}}</a>
-    </div>
-    <div class="column">
-        Due {{f.due}}
-    </div>
-</div>
 {% endif %}
 {% endfor %}
     </div>

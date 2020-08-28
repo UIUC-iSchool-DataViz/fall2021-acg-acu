@@ -1,7 +1,8 @@
 ---
 layout: week
-visible: false
+visible: true
 icon: undraw_version_control_9bpv.svg
+examples: []
 ---
 
 # Data Storage and Manipulation

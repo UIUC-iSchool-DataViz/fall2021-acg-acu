@@ -18,7 +18,7 @@ how we draw with it, let's do some things to it.
 
 <div class="left" data-markdown="true">
 
-![](images/palette.svg)<!-- .element: style="height: 20em;" -->
+![palette of operations](images/palette.svg)<!-- .element: style="height: 20em;" -->
 
 </div>
 

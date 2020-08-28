@@ -1,6 +1,7 @@
 ---
 layout: syllabus
 title: Syllabus
+notitle: true
 ---
 
 # COVID-19 Statement

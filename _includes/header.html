@@ -2,8 +2,11 @@
     <nav class="navbar" role="navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a href="/" title="home" class="navbar-item">
-                    <span class="logo"><h1>{{ .site.title | default: site.github.repository_name }}</h1></span>
+                <a href="{{ '/' | relative_url }}" title="home" class="navbar-item">
+                    <span class="icon is-large">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    {{ site.data.class.course.number | default: site.github.repository_name }}
                 </a>
                 <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
                   <span aria-hidden="true"></span>
@@ -16,13 +19,19 @@
                     {% assign menuitems = site.data.menuitems | sort:"weight" %}
                     {% for menuitem in menuitems %}
                     <a href="{{ menuitem.url | relative_url }}" class="navbar-item">
-                        <i class="fas {{menuitem.faicon}}"></i>&nbsp;{{ menuitem.name }}
+                        <span class="icon is-large">
+                            <i class="{{menuitem.facollection | default: 'fas' }} {{menuitem.faicon}}"></i>
+                        </span>
+                        {{ menuitem.name }}
                     </a>
                     {% endfor %}
                 </div>
                 <div class="navbar-end">
-                    <a href="{{site.data.class.coursework_site.url}}" class="navbar-item">
-                        <i class="fas {{site.data.class.coursework_site.faicon}}"></i>&nbsp;{{ site.data.class.coursework_site.name}}
+                    <a href="{{site.github.url}}" class="navbar-item">
+                        <span class="icon is-large">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        GitHub
                     </a>
                 </div>
             </div>
