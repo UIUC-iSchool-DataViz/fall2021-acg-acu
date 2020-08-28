@@ -46,18 +46,18 @@ layout: default
                     <img src="{{ '/assets/undraw/' | append: f.icon | relative_url }}">
                 </a>
             {% endif %}
-        </figure>
-		<h3 class="subtitle">
-            <a href="{{f.url | relative_url }}">{{f.title}}</a>
-		</h3>
-		<p>
-			{% for tag in tags %}
-			<span class="tag" data-tag="{{tag}}">
-				{{tag}}
-			</span>
-			{% endfor %}
-		</p>
-		</div>
+            </figure>
+            <h3 class="subtitle">
+                <a href="{{f.url | relative_url }}">{{f.title}}</a>
+            </h3>
+            <p>
+                {% for tag in tags %}
+                <span class="tag" data-tag="{{tag}}">
+                    {{tag}}
+                </span>
+                {% endfor %}
+            </p>
+        </div>
     </div>
     <div class="column">
         {% for lecture in lectures %}
@@ -107,3 +107,21 @@ layout: default
 {% endfor %}
     </div>
 </section>
+<script>
+window.addEventListener('load', (event) => {
+    for (var tag of document.querySelectorAll("span.tag")) {
+        tag.addEventListener("click", (event) => {
+            // First turn off all the previous elements
+            var tagName = event.target.dataset['tag'];
+            var justToggle = event.target.classList.contains("is-success");
+            for (var t of document.querySelectorAll("span.tag")) {
+                t.classList.remove("is-success");
+            }
+            if (justToggle) return;
+            for (var t of document.querySelectorAll(`[data-tag="${tagName}"]`)) {
+                t.classList.add("is-success");
+            }
+        })
+    }
+});
+</script>
