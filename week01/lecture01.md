@@ -44,7 +44,7 @@ I will attempt to:
 
 ## Summary of Locations
 
- * Grades and assigmnets will be on [Moodle](https://learn.illinois.edu/).
+ * Grades and assignments will be on [Moodle](https://learn.illinois.edu/).
  * Course repo is at [UIUC-iSchool-DataViz/fall2020-BOG-BOU](https://github.com/UIUC-iSchool-DataViz/fall2020-BOG-BOU/), automatically built at [uiuc-ischool-dataviz.github.io/fall2020-BOG-BOU/](https://uiuc-ischool-dataviz.github.io/fall2020-BOG-BOU). Lecture notes, notebooks, data and course info will be placed there.
  * Slack is the best place to ask questions: https://is445-fall2020.slack.com/
 
@@ -185,7 +185,7 @@ consuming information visually.
 ## The Things I Want You To Take Away
 
  * You should know the basics of how to manipulate data -- aggregations,
-   filterings, and other operations.
+   filtering, and other operations.
  * I want you to know _some_ of the packages that are out there to visualize
    data.  These will mostly be Python-based, with a couple in Javascript.
  * You won't learn how to use dashboarding software in detail.  Instead, we
