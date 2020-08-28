@@ -26,6 +26,7 @@ layout: default
         <h1>Weekly Lectures and Materials</h1>
         <hr/>
 {% assign sorted_pages = site.html_pages | sort:"path" %}
+{% assign all_notebooks = site.static_files | where: "extname", ".ipynb" | sorted %}
 {% for f in sorted_pages %}
 {% if f.dir contains "week" and f.path contains "index" %}
 {% assign tags = "" | split: ", " %}
@@ -69,18 +70,45 @@ layout: default
             </div>
         </article>
         {% endfor %}
+        <nav class="level">
         {% for assignment in assignments %}
-        <article class="media">
-            <figure class="media-left">
-                <span class="icon"><i class="fas fa fa-pencil-ruler"></i></span>
-            </figure>
-            <div class="media-content">
-                <a href="{{assignment.url | relative_url }}">{{ assignment.title }}</a> - {{ assignment.description }}</p>
+        <div class="level-item has-text-centered">
+            <div>
+                <p>
+                    <h1 class="title">
+                    <span class="icon"><i class="fas fa-pencil-ruler"></i></span>
+                    </h1>
+                </p>
+                <p>
+                    <a href="{{assignment.url | relative_url }}">{{ assignment.title }}</a>
+                </p>
             </div>
-        </article>
+        </div>
         {% endfor %}
+        {% for nb in all_notebooks %}
+        {% comment %}
+        I don't know how to avoid this, since static files don't have a dir
+        attribute 
+        {% endcomment %}
+        {% if nb.path contains f.dir %}
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">
+                    <span class="icon"><i class="fas fa fa-chart-line"></i></span>
+                </p>
+                <p>
+                {{nb.basename | replace: "_", " " | capitalize }}
+                (<a href="nbv.html?notebook_name={{nb.path | relative_url | url_encode }}">view</a>,
+                <a href="{{nb.path | relative_url}}">download</a>)</li>
+                </p>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        </nav>
     </div>
 </div>
+<hr/>
 {% endif %}
 {% endfor %}
     </div>
