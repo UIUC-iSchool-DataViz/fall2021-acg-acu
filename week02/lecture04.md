@@ -172,7 +172,7 @@ dimensions.
 
 We can split or group collections of data based on some characteristic.
 
-<!-- .slide: data-background-image="images/split.svg" data-background-size="65% auto" data-background-position="top 5.0em center"-->
+<!-- .slide: data-background-image="images/split.svg" data-background-size="65% auto" data-background-position="top 10.0em center"-->
 
 ---
 
@@ -180,7 +180,7 @@ We can split or group collections of data based on some characteristic.
 
 We can split or group collections of data based on some characteristic.
 
-<!-- .slide: data-background-image="images/split_finished.svg" data-background-size="65% auto" data-background-position="top 5.0em center"-->
+<!-- .slide: data-background-image="images/split_finished.svg" data-background-size="65% auto" data-background-position="top 10.0em center"-->
 
 ---
 
