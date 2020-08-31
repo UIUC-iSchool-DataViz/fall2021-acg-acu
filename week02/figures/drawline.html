@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js" integrity="sha512-5xkNvFVCctXwOszeifE8pzjyDFlHvHDCKIrhwmuSbCtTHqc7IhA6/1tTNYXE8WmYvwP5KFQegCS1QRR4poYgjg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flubber/0.4.2/flubber.min.js"></script>
+      <script src="https://unpkg.com/d3-rect"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+<style>
+  .overlapping {
+      fill: #AAAAAA;
+  }
+  .gridCells {
+      z-index: 10000;
+  }
+</style>
+  </head>
+  <body>
+    <div id="vis"></div>
+    <input type="range" min="1" max="6" value="2" step="1" id="ngridcell2"/>
+    <output id="ngridcells">4</output>
+    
+    <script type="text/javascript">
+
+        var w = 600;
+        var h = 600;
+        var Ngrid = 4;
+        var p1 = {x: 0.2, y: 0.1};
+        var p2 = {x: 0.89, y: 0.5};
+        var cells = [];
+        const svg = d3.select("#vis")
+            .append("svg")
+            .attr("height", h)
+            .attr("width", w)
+            .attr("viewBox", [0, 0, w, h]);
+        var xScale = d3.scaleLinear().domain([0.0, 1.0]).range([0, w]).clamp(true);
+        var yScale = d3.scaleLinear().domain([0.0, 1.0]).range([h, 0]).clamp(true);
+
+        d3.select("input#ngridcell2").attr("width", w).on("input", event => {
+            Ngrid = Math.pow(2, event.target.value);
+            d3.select("output#ngridcells").text(Ngrid);
+            createGrids();
+            walkAndColorLine();
+        });
+
+        function createGrids() {
+            var dx = w / Ngrid;
+            var dy = h / Ngrid;
+            cells.length = 0;
+            d3.range(Ngrid).forEach(i => {
+                d3.range(Ngrid).forEach(j => {
+                    cells.push(
+                        {x0: xScale(i / Ngrid),
+                            y0: yScale((j+1) / Ngrid),
+                            x1: xScale((i+1) / Ngrid),
+                            y1: yScale(j / Ngrid),
+                            dx: dx,
+                            dy: dy,
+                            xi: i, yi: j}
+                    );
+                })
+            });
+            svg
+                .select("g#gridBoxes")
+                .selectAll("rect")
+                .data(cells)
+                .join("rect")
+                .classed("gridCells", true)
+                .classed("overlapping", false)
+                .attr("x", d => d.x0)
+                .attr("y", d => d.y0)
+                .attr("width", d => d.dx)
+                .attr("height", d => d.dy)
+                .attr("fill", "none")
+                .attr("stroke", "black");
+        }
+
+        svg
+            .append("g")
+            .attr("id", "gridBoxes");
+        svg
+            .append("g")
+            .attr("id", "line")
+            .append("line")
+            .attr("x1", xScale(p1.x))
+            .attr("x2", xScale(p2.x))
+            .attr("y1", yScale(p1.y))
+            .attr("y2", yScale(p2.y))
+            .attr("stroke", "black")
+            .attr("stroke-width", 10.0);
+
+        function dragstarted() {
+            d3.select(this).attr("stroke", "blue");
+        }
+
+        function dragged(event, d) {
+            d.x = xScale.invert(event.x);
+            d.y = yScale.invert(event.y);
+            d3.select(this).raise().attr("cx", xScale(d.x)).attr("cy", yScale(d.y));
+            svg.select("g#line")
+                .selectAll("line")
+                .attr("x1", xScale(p1.x))
+                .attr("x2", xScale(p2.x))
+                .attr("y1", yScale(p1.y))
+                .attr("y2", yScale(p2.y))
+            walkAndColorLine();
+        }
+
+        function dragended() {
+            d3.select(this).attr("stroke", "black");
+        }
+
+        var drag = d3.drag()
+            .subject((event, d) => ({x: event.x, y: event.y}))
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended);
+
+        svg
+            .append("g")
+            .attr("id", "points")
+            .selectAll("circle")
+            .data([p1, p2])
+            .join("circle")
+            .attr("cx", d => xScale(d.x))
+            .attr("cy", d => yScale(d.y))
+            .attr("r", 15)
+            .attr("fill", "green")
+            .call(drag)
+            .attr("stroke", "black")
+            .attr("stroke-width", 2.5);
+
+        // Now use a path length to figure out which grid cells overlap the line
+
+        function walkAndColorLine() {
+            //temp_x = 
+            var cur_ind = [Math.max(Math.min(Math.floor(p1.x * Ngrid), Ngrid-1), 0),
+                Math.max(Math.min(Math.floor(p1.y * Ngrid), Ngrid-1), 0)];
+            var fin_ind = [Math.max(Math.min(Math.floor(p2.x * Ngrid), Ngrid-1), 0),
+                Math.max(Math.min(Math.floor(p2.y * Ngrid), Ngrid-1), 0)];
+            var v_dir = [p2.x - p1.x, p2.y - p1.y];
+            if (v_dir[0] == 0.0) v_dir[0] = 1e-6;
+            if (v_dir[1] == 0.0) v_dir[1] = 1e-6;
+            var temp_y;
+            var t_max = [1e60, 1e60];
+            var step = [v_dir[0] > 0 ? 1 : -1,
+                v_dir[1] > 0 ? 1 : -1];
+            if (v_dir[0] > 0) {
+                t_max[0] = ((cur_ind[0] + 1) / Ngrid - p1.x) / v_dir[0]
+            } else if (v_dir[0] < 0) {
+                t_max[0] = (cur_ind[0] / Ngrid - p1.x) / v_dir[0]
+            }
+            if (v_dir[1] > 0) {
+                t_max[1] = ((cur_ind[1] + 1) / Ngrid - p1.y) / v_dir[1]
+            } else if (v_dir[1] < 0) {
+                t_max[1] = (cur_ind[1] / Ngrid - p1.y) / v_dir[1]
+            }
+            var tdelta = [step[0] / v_dir[0] / Ngrid,
+                step[1] / v_dir[1] / Ngrid];
+            var selectedGrids = [];
+            var enter_t = 0.0;
+            var i = 0;
+            while(true) {
+                // Compute our current value
+                selectedGrids.push( cur_ind[0] * Ngrid + cur_ind[1] );
+                if (cur_ind[0] == fin_ind[0] && cur_ind[1] == fin_ind[1]) break;
+                i = (t_max[0] < t_max[1]) ? 0 : 1;
+                cur_ind[i] += step[i];
+                t_max[i] += tdelta[i];
+                enter_t = t_max[i];
+            }
+            svg.selectAll("rect").classed("overlapping", (d, i) => selectedGrids.includes(i) );
+        }
+        createGrids();
+        walkAndColorLine();
+
+        function setup() {
+        }
+
+        var _transitions = [{
+            transitionForward: () => setup(),
+        },
+        ];
+
+    </script>
+  </body>
+</html>
