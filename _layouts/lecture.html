@@ -62,15 +62,9 @@
         margin: 0.02,
         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
         dependencies: [
-            { src: 'https://cdn.jsdelivr.net/npm/reveald3/reveald3.js'},
-            { src: '/reveal.js-plugins/chalkboard/chalkboard.js' }
+            { src: 'https://cdn.jsdelivr.net/npm/reveald3/reveald3.js'}
         ],
 		keyboard: {
-			67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
-			66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
-			46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
-			 8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
-			68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
 		},
         center: false,
         transition: 'none',
