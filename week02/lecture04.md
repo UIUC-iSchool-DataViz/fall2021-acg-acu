@@ -9,6 +9,20 @@ description: >-
   What operations can we do on data, how can we represent and compute distributions, and how do we scale values in relation to each other?
 ---
 
+## Today's Topics
+
+ * Operational Palette
+   * Filtering
+   * Sampling
+   * Mutation
+   * Histograms and aggregations
+   * Splitting
+ * Data types in a visualization
+ * Distributions
+ * Elements of a visualization
+
+---
+
 ## Doing Stuff with Data
 
 Now that we understand a few ways that data can be stored, and

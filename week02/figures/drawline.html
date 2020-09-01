@@ -18,7 +18,7 @@
   </head>
   <body>
     <div id="vis"></div>
-    <input type="range" min="1" max="5" value="2" step="1" id="ngridcell2"/>
+    <input type="range" min="0" max="5" value="2" step="1" id="ngridcell2"/>
     <output id="ngridcells">4</output>
     
     <script type="text/javascript">
@@ -134,7 +134,7 @@
         // Now use a path length to figure out which grid cells overlap the line
 
         function walkAndColorLine() {
-            //temp_x = 
+            if (Ngrid == 1) return;
             var cur_ind = [Math.max(Math.min(Math.floor(p1.x * Ngrid), Ngrid-1), 0),
                 Math.max(Math.min(Math.floor(p1.y * Ngrid), Ngrid-1), 0)];
             var fin_ind = [Math.max(Math.min(Math.floor(p2.x * Ngrid), Ngrid-1), 0),

@@ -22,17 +22,8 @@ https://www.axios.com/the-latest-on-harveys-energy-toll-2479055875.html
 
 ## Today's Topics
 
- * How does drawing work?
  * Data Formats
- * Operational Palette
-   * Filtering
-   * Sampling
-   * Mutation
-   * Histograms and aggregations
-   * Splitting
- * Data types in a visualization
- * Distributions
- * Elements of a visualization
+ * How do images and drawings work?
 
 ---
 
