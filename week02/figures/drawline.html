@@ -14,17 +14,23 @@
   .gridCells {
       z-index: 10000;
   }
+  .container {
+      margin: auto;
+          width: 500px;
+  }
 </style>
   </head>
   <body>
-    <div id="vis"></div>
-    <input type="range" min="0" max="5" value="2" step="1" id="ngridcell2"/>
-    <output id="ngridcells">4</output>
+      <div class="container">
+          <div id="vis"></div>
+          <input type="range" min="0" max="5" value="2" step="1" id="ngridcell2"/>
+          <output id="ngridcells">4</output>
+      </div>
     
     <script type="text/javascript">
 
-        var w = 600;
-        var h = 600;
+        var w = 500;
+        var h = 500;
         var Ngrid = 4;
         var p1 = {x: 0.2, y: 0.1};
         var p2 = {x: 0.89, y: 0.5};

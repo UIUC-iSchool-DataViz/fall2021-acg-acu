@@ -331,6 +331,13 @@ Convert to an 32x32 image.
 
 ---
 
+## Let's draw a line.
+
+<div class="fig-container" data-style="height: 600px;" data-file="figures/drawline.html" data-markdown=true>
+</div>
+
+---
+
 ## Representations
 
 We will concern ourselves with understanding two representations of an image:
