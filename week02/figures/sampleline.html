@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js" integrity="sha512-5xkNvFVCctXwOszeifE8pzjyDFlHvHDCKIrhwmuSbCtTHqc7IhA6/1tTNYXE8WmYvwP5KFQegCS1QRR4poYgjg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flubber/0.4.2/flubber.min.js"></script>
+      <script src="https://unpkg.com/d3-rect"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+<style>
+  .overlapping {
+      fill: #AAAAAA;
+  }
+  .gridCells {
+      z-index: 10000;
+  }
+  .container {
+      margin: auto;
+          width: 500px;
+  }
+</style>
+  </head>
+  <body>
+      <div class="container">
+          <div id="vis"></div>
+          <input type="range" min="0" max="128" value="32" step="1" id="nsamples"/>
+          <output id="nsamplesoutput">32</output>
+          <input type="range" min="0" max="8.0" value="2.0" step="0.01" id="period"/>
+          <output id="periodoutput">2</output>
+      </div>
+    
+      <script type="text/javascript">
+
+          const w = 500;
+          const h = 500;
+          const Nbase=1024;
+          var Nsample = 32;
+          const pad = 30;
+          var period = 4.0;
+          const svg = d3.select("#vis")
+              .append("svg")
+              .attr("width", w)
+              .attr("height", h);
+          const xBase = d3.range(Nbase).map( d => 2*Math.PI / Nbase * d);
+          const xScale = d3.scaleLinear().domain([0.0, 2.0*Math.PI]).range([0 + pad, w - pad]);
+          const yScale = d3.scaleLinear().domain([-1.0, 1.0]).range([h - pad, 0 + pad]);
+          const xAxis = d3.axisTop(xScale);
+          const yAxis = d3.axisLeft(yScale);
+          svg.append("g")
+              .attr("transform", "translate(30,0)")
+              .call(yAxis);
+          svg.append("g")
+              .attr("transform", "translate(0," + yScale(0.0) + ")")
+              .call(xAxis);
+          svg.append("g").attr("id", "baseLine");
+          svg.append("g").attr("id", "sampleStuff");
+
+          function resample() {
+            var x2 = d3.range(Nsample).map(d3.randomUniform(0.0, 2.0*Math.PI)).sort();
+            var samples = svg.select("g#sampleStuff");
+              samples.selectAll("circle")
+                  .data(x2)
+                  .join("circle")
+                  .attr("cx", d => xScale(d))
+                  .attr("cy", d => yScale(Math.sin(d*period)))
+                  .attr("r", 5.0)
+                  .attr("fill", "black");
+              samples
+                .selectAll("path")
+                .data([x2])
+                .join("path")
+                .attr("fill", "none")
+                .attr("stroke", "black")
+                .attr("stroke-width", 2.0)
+                .attr("d", d3.line()
+                    .x( d => xScale(d) )
+                    .y( d=> yScale(Math.sin(d*period) ))
+                    );
+          }
+
+          // Add the line
+          function setupBaseline() {
+            svg.select("g#baseLine")
+                .selectAll("path")
+                .data([xBase])
+                .join("path")
+                .attr("fill", "none")
+                .attr("stroke", "steelblue")
+                .attr("stroke-width", 5.0)
+                .attr("stroke-opacity", 0.25)
+                .attr("d", d3.line()
+                    .x( d => xScale(d) )
+                    .y( d=> yScale(Math.sin(d*period) ))
+                    );
+          }
+
+          setupBaseline();
+          resample();
+          d3.select("input#nsamples").on("input", event => {
+              Nsample = event.target.value;
+              d3.select("output#nsamplesoutput").text(Nsample);
+              resample();
+          });
+          d3.select("input#period").on("input", event => {
+              period = event.target.value;
+              d3.select("output#periodoutput").text(period);
+              setupBaseline();
+              resample();
+          });
+
+
+          var _transitions = [{
+          },
+          ];
+
+      </script>
+  </body>
+</html>
