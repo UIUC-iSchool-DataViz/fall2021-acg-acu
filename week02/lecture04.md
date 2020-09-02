@@ -111,29 +111,7 @@ value not in (3.141, 2.7)
 We can choose a subset of points and use those to explore our data.  This is
 not without its possible faults, however.
 
----
-
-<!-- .slide: data-background-image="images/sampling_fig1.png" data-background-size="contain" -->
-
----
-
-<!-- .slide: data-background-image="images/sampling_fig2.png" data-background-size="contain" -->
-
----
-
-<!-- .slide: data-background-image="images/sampling_fig3.png" data-background-size="contain" -->
-
----
-
-<!-- .slide: data-background-image="images/sampling_fig4.png" data-background-size="contain" -->
-
----
-
-<!-- .slide: data-background-image="images/sampling_fig5.png" data-background-size="contain" -->
-
----
-
-<!-- .slide: data-background-image="images/sampling_fig6.png" data-background-size="contain" -->
+<div class="fig-container" data-style="height: 600px;" data-file="figures/sampleline.html" data-markdown=true>
 
 ---
 

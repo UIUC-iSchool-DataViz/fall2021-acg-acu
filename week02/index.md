@@ -4,8 +4,8 @@ visible: true
 icon: undraw_version_control_9bpv.svg
 examples: 
   - filename: lecture03_examples.ipynb
-  - type: ipynb
-  - title: Loading and Displaying Image Data
+    type: ipynb
+    title: Loading and Displaying Image Data
     description: A little bit of loading image data, displaying that image data, and using matplotlib
 ---
 
