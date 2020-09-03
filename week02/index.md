@@ -7,6 +7,10 @@ examples:
     type: ipynb
     title: Loading and Displaying Image Data
     description: A little bit of loading image data, displaying that image data, and using matplotlib
+  - filename: lecture04_examples.ipynb
+    type: ipynb
+    title: First steps with Pandas
+    description: Loading the building inventory and filtering, mutating, splitting and plotting some of its data
 ---
 
 # Data Storage and Manipulation
