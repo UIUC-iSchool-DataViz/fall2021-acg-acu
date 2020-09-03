@@ -23,10 +23,16 @@
   <body>
       <div class="container">
           <div id="vis"></div>
-          <input type="range" min="0" max="128" value="32" step="1" id="nsamples"/>
-          <output id="nsamplesoutput">32</output>
+          <input type="range" min="0" max="128" value="128" step="1" id="nsamples"/>
+          <output id="nsamplesoutput">128</output>
           <input type="range" min="0" max="8.0" value="2.0" step="0.01" id="period"/>
           <output id="periodoutput">2</output>
+          <select id="random_type">
+          <option value="uniform">Uniform</option>
+          <option value="normal">Normal</option>
+          <option value="lognormal">Log Normal</option>
+          <option value="sequential">Sequential</option>
+          </select>
       </div>
     
       <script type="text/javascript">
@@ -34,9 +40,10 @@
           const w = 500;
           const h = 500;
           const Nbase=1024;
-          var Nsample = 32;
+          var Nsample = 128;
           const pad = 30;
           var period = 4.0;
+          var distType = "uniform";
           const svg = d3.select("#vis")
               .append("svg")
               .attr("width", w)
@@ -56,7 +63,16 @@
           svg.append("g").attr("id", "sampleStuff");
 
           function resample() {
-            var x2 = d3.range(Nsample).map(d3.randomUniform(0.0, 2.0*Math.PI)).sort();
+              var x2 = d3.range(Nsample);
+              if (distType == "uniform") {
+                  x2 = x2.map(d3.randomUniform(0.0, 2.0*Math.PI)).sort();
+              } else if (distType == "normal") {
+                  x2 = x2.map(d3.randomNormal(Math.PI, Math.PI/4.0)).sort();
+              } else if (distType == "lognormal") {
+                  x2 = x2.map(d3.randomLogNormal(Math.log(Math.PI), Math.log(Math.PI/4.0))).sort();
+              } else if (distType == "sequential") {
+                  x2 = x2.map( v => 2.0 * Math.PI * v / Nsample);
+              }
             var samples = svg.select("g#sampleStuff");
               samples.selectAll("circle")
                   .data(x2)
@@ -105,6 +121,10 @@
               period = event.target.value;
               d3.select("output#periodoutput").text(period);
               setupBaseline();
+              resample();
+          });
+          d3.select("select#random_type").on("input", event => {
+              distType = event.target.value;
               resample();
           });
 
