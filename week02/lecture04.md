@@ -9,8 +9,21 @@ description: >-
   What operations can we do on data, how can we represent and compute distributions, and how do we scale values in relation to each other?
 ---
 
+## Weekly Visualization Reports
+
+Every week, you are to turn in a visualization you have found in the media
+(newspapers, magazines, online journalism) and a brief summary of something you like/don't like,
+think is interesting, etc.
+
+_These are meant to be easy points:_ No more than 2-3 sentences are needed in your description.
+
+We start: on Tuesday!
+
+---
+
 ## Today's Topics
 
+ * Types of data
  * Operational Palette
    * Filtering
    * Sampling
@@ -20,6 +33,60 @@ description: >-
  * Data types in a visualization
  * Distributions
  * Elements of a visualization
+
+---
+
+## Types of Data
+
+We will talk about two basic types of data: numerical/quantitative and categorical/qualitative.
+
+(There are lots of subtleties we will, for now, gloss over.)
+
+---
+
+## Types of Data: Numerical and Quantitative
+
+
+<div class="fragment" data-markdown=true>
+
+**Discrete data** is countable, and separable into distinct pieces.  This would be, for instance, "the number of people sitting in a classroom."
+
+</div>
+<div class="fragment" data-markdown=true>
+
+**Continuous data** is measurable, and takes on a continuous set of values.  Things like weight, volume, length, density, etc.
+
+</div>
+
+notes:
+
+Dennis Reynolds:
+[to Charlie] Alright buddy now explain to me how exactly we are going to calculate the totals?
+
+Charlie Kelly:
+Oh its easy dude. You pour gas into the car using one of these funnels, right. And I count how much gas is going into the car.
+
+Dennis Reynolds:
+Alright, let me, let me just stop you right there. How exactly are you planning on COUNTING a liquid?
+
+Charlie Kelly:
+Uhh, I know how to count dude
+
+---
+
+## Types of Data: Categorical and Qualitative
+
+
+<div class="fragment" data-markdown=true>
+
+**Nominal data** is something you can give a name to.  This might be things like, "favorite color" or "originating state."
+
+</div>
+<div class="fragment" data-markdown=true>
+
+**Ordinal data** is that which you can place in order or rank.  This might be something like a Likert scale, where choices are ranked.
+
+</div>
 
 ---
 
