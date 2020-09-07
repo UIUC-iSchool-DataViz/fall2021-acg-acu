@@ -27,22 +27,12 @@ http://moviebarcode.tumblr.com/
 
 ## Today's Topics
 
- * Getting started with Python viz
- * Transformations
+ * Transformations 
+ * Scaling
  * Colors
  * Color mapping
  * Data Characteristics
  * Choosing Visualizations
-
----
-
-## Whole Tale
-
-We'll be using Whole Tale for visualization today.
-
-Go to [wholetale.org](https://wholetale.org) and find the tale "IS590DV Week 3".
-
-We will do some _basic_ pandas and visualization.
 
 ---
 
@@ -98,6 +88,17 @@ We can use these to accomplish:
  * Scaling
 
 <!-- .slide: data-background-image="images/affine_4.svg" data-background-size="30% auto" data-background-position="right 20% bottom 50%" -->
+
+---
+
+## Transformations
+
+<div class="col" data-markdown=true>
+
+In this figure, we can adjust the mixing vectors and the offset.  What do you notice about colinear points and parallel lines?
+
+<div class="fig-container" data-style="height: 600px;" data-file="figures/affine_transformation.html" data-markdown=true>
+</div>
 
 ---
 
