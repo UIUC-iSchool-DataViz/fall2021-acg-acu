@@ -19,3 +19,13 @@ choose colors and transforms to better suit our data.
  * VAD, Ch. 5: Marks and Channels 
  * [Perception in Visualization](https://www.csc2.ncsu.edu/faculty/healey/PP/)
  * [Palettable Docs](https://jiffyclub.github.io/palettable/#documentation)
+
+## Quick Reference for Matplotlib
+
+Developed and available at [github.com/matplotlib/cheatsheets](https://github.com/matplotlib/cheatsheets)
+
+ * [Cheatsheet 1](cheatsheets-1.png)
+ * [Cheatsheet 2](cheatsheets-2.png)
+ * [Handout for Beginners](handout-beginner.png)
+ * [Handout for Intermediate Users](handout-intermediate.png)
+ * [Handout with Tips](handout-tips.png)
