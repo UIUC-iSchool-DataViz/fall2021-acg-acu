@@ -1,17 +1,12 @@
 ---
-title: Lecture 3
+title: Transformations and Scaling
 layout: lecture
----
-<!-- .slide: class="titleslide" -->
-
-# Data Visualization
-
-<div style="height: 6.0em;"></div>
-
-## Matthew Turk
-## Fall 2019
-## Lecture 3
-
+tags:
+  - scaling
+  - colors
+  - colormaps
+description: >-
+  How do we transform and scale data?  How can we apply scalings to data, and what does this have to do with color?
 ---
 
 ## Warm-Up Activity
@@ -31,8 +26,28 @@ http://moviebarcode.tumblr.com/
  * Scaling
  * Colors
  * Color mapping
- * Data Characteristics
- * Choosing Visualizations
+
+Next time, we will discuss:
+
+ * More on colormapping and color conversions
+ * Visual encoding
+ * Data transformation
+
+---
+
+## Transformations
+
+We will need to transform data in order to apply consistent visual encoding.
+There are many reasons we may need to accomplish this, including color mapping,
+applying units, and co-registration or normalization of data.
+
+One of the most important transformations we will have is that of an [Affine transformation](https://en.wikipedia.org/wiki/Affine_transformation).  This is a transformation that preserves:
+
+ * Collinearity
+ * Parallellism
+ * Convexity
+ * Ratios of parallel lines
+ * Barycenters of point sets
 
 ---
 
@@ -121,14 +136,21 @@ continuities.
 
 ---
 
+<!-- .slide: data-background-image="https://upload.wikimedia.org/wikipedia/commons/e/e8/1414_Rods_and_Cones.jpg" data-background-size="auto 75%" data-background-position="right 30% bottom 50%"-->
+
 ## How Do Colors Work?
+
+<div class="left" data-markdown=true>
 
 Rods (low-light) and cones (color) mediate vision. Humans have about 20 times
 as many rods (120 million) as cones (6 million).
 
-https://upload.wikimedia.org/wikipedia/commons/e/e8/1414_Rods_and_Cones.jpg
+Roughly speaking, cones see in the colors red, green and blue.
+
 By OpenStax College [CC BY 3.0](http://creativecommons.org/licenses/by/3.0),
 via Wikimedia Commons
+
+</div>
 
 ---
 
@@ -177,25 +199,25 @@ http://enchroma.com/test/instructions/
 
 ## Sequential Colormaps
 
-![](images/blues_discrete.png)
+![blues discrete colormap](images/blues_discrete.png)
 
-![](images/blues_continuous.png)
+![blues continuous colormap](images/blues_continuous.png)
 
 ---
 
 ## Diverging Colormaps
 
-![](images/spectral_discrete.png)
+![spectral discrete colormap](images/spectral_discrete.png)
 
-![](images/spectral_continuous.png)
+![spectral continuous colormap](images/spectral_continuous.png)
 
 ---
 
 ## Qualitative Colormaps
 
-![](images/set1_discrete.png)
+![discrete set1 of colors](images/set1_discrete.png)
 
-![](images/set1_continuous.png)
+![continuous set1 of colors](images/set1_continuous.png)
 
 (See?  Works better as discrete!)
 
