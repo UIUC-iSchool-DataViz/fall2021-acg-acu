@@ -2,13 +2,17 @@
 layout: week
 visible: true
 icon: undraw_cohort_analysis_stny.svg
-examples: []
+examples:
+  - filename: lecture05_examples.ipynb
+    type: ipynb
+    title: Matplotlib specifics
+    description: This goes over some very specific aspects of matplotlib, and how to apply data transformations to patches and annotations, as well as modifying properties of the plot.
 ---
 
-# Types of Viz and Choosing Colors
+# Transformations and Colors
 
-This week, we covered how colors work, how transformations work, and how we can
-choose colors and transforms to better suit our data.
+This week, we covered how transformations work, how colors work, and how we can
+choose transforms and colors to better suit our data.
 
 ## References and Reading List
 
