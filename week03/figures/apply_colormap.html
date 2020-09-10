@@ -17,11 +17,12 @@
   </head>
   <body>
       <div class="container">
-          <canvas id="reglvis" width="640" height="480">
+          <canvas id="reglvis" width="480" height="360">
           </canvas>
           <div id="vis"></div>
           <select id="cmap_name">
           </select>
+          <input type="file" accept="image/*" id="image-upload">
       </div>
     
     <script type="text/javascript">
@@ -45,8 +46,8 @@
             .attr("value", d => d)
             .text(d => d);
 
-        const width = 640;
-        const height = 300;
+        const width = 480;
+        const height = 200;
         const svg = d3.select("#vis").append("svg")
             .attr("width", width)
             .attr("height", height);
@@ -99,6 +100,11 @@
         image.onload = (event) => {
             imageTexture = regl.texture(image);
         }
+
+        document.getElementById("image-upload").addEventListener('change', (event) => {
+            image.src = URL.createObjectURL(event.target.files[0]);
+            imageTexture = regl.texture(image);
+        });
 
         const drawTriangle = regl({
             frag: `
