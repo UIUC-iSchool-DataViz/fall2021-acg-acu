@@ -41,13 +41,7 @@ http://enchroma.com/test/instructions/
 
 ---
 
-## Color Matching Function
-
-<!-- .slide: data-background-image="images/cmf.png" data-background-size="auto 75%" -->
-
----
-
-## Responsivity Function
+## Color Responsivity Function
 
 <!-- .slide: data-background-image="images/resp.png" data-background-size="auto 75%" -->
 
@@ -63,6 +57,13 @@ http://enchroma.com/test/instructions/
  * List of colors by name
    * [Web](https://www.w3schools.com/colors/colors_names.asp)
    * [matplotlib](https://matplotlib.org/2.0.2/examples/color/named_colors.html)
+
+---
+
+## "Naming" Colors: HSV
+
+<div class="fig-container" data-style="height: 600px;" data-file="figures/hsv_space.html" data-markdown=true>
+</div>
 
 ---
 
