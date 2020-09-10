@@ -20,6 +20,7 @@
           <canvas id="reglvis" width="480" height="360">
           </canvas>
           <div id="vis"></div>
+          <input type="range" min="0.0" max="8" value="1.0" step="1.0" id="trunc-value">
           <select id="cmap_name">
           </select>
           <input type="file" accept="image/*" id="image-upload">
@@ -112,11 +113,13 @@
             uniform sampler2D texture;
             uniform sampler2D colormap;
             varying vec2 uv;
+            uniform float truncateValue;
             void main() {
               vec4 sample = texture2D(texture, uv);
               //float intensity = (sample.r + sample.g + sample.b) / 3.0;
               // Just use blue channel.
-              float intensity = sample.b;
+              float nBins = pow(2.0, truncateValue);
+              float intensity = (floor((sample.b * 255.0)/nBins) * nBins)/255.0; 
               gl_FragColor = texture2D(colormap, vec2(intensity, 0.5));
             }`,
 
@@ -141,6 +144,7 @@
             uniforms: {
                 texture: regl.prop('image'),
                 colormap: regl.prop('colormap'),
+                truncateValue: regl.prop('truncateValue'),
             },
 
             count: 3
@@ -154,7 +158,8 @@
             if ((!colormapTexture) || (!imageTexture)) return;
             drawTriangle({
                 image: imageTexture,
-                colormap: colormapTexture
+                colormap: colormapTexture,
+                truncateValue: +document.querySelector("#trunc-value").value,
             });
         })
 
