@@ -150,51 +150,77 @@ $ v' = (v - v_0)/(v_1 - v_0) $
 
 ---
 
+## Colormaps: `gist_stern`
+
 <!-- .slide: data-background-image="images/gist_stern_colors.png" data-background-size="auto 75%" -->
 
 ---
 
-<!-- .slide: data-background-image="images/gray_colors.png" data-background-size="auto 75%" -->
-
----
-
-<!-- .slide: data-background-image="images/jet_colors.png" data-background-size="auto 75%" -->
-
----
-
-<!-- .slide: data-background-image="images/magma_colors.png" data-background-size="auto 75%" -->
-
----
-
-<!-- .slide: data-background-image="images/viridis_colors.png" data-background-size="auto 75%" -->
-
----
-
-<!-- .slide: data-background-image="images/flag_colors.png" data-background-size="auto 75%" -->
-
----
+## Colormaps: `gist_stern`
 
 <!-- .slide: data-background-image="images/gist_stern_3d.png" data-background-size="auto 75%" -->
 
 ---
 
+## Colormaps: `gray`
+
+<!-- .slide: data-background-image="images/gray_colors.png" data-background-size="auto 75%" -->
+
+---
+
+## Colormaps: `gray`
+
 <!-- .slide: data-background-image="images/gray_3d.png" data-background-size="auto 75%" -->
 
 ---
+
+## Colormaps: `jet`
+
+<!-- .slide: data-background-image="images/jet_colors.png" data-background-size="auto 75%" -->
+
+---
+
+## Colormaps: `jet`
 
 <!-- .slide: data-background-image="images/jet_3d.png" data-background-size="auto 75%" -->
 
 ---
 
+## Colormaps: `magma`
+
+<!-- .slide: data-background-image="images/magma_colors.png" data-background-size="auto 75%" -->
+
+---
+
+## Colormaps: `magma`
+
 <!-- .slide: data-background-image="images/magma_3d.png" data-background-size="auto 75%" -->
 
 ---
+
+## Colormaps: `viridis`
+
+<!-- .slide: data-background-image="images/viridis_colors.png" data-background-size="auto 75%" -->
+
+---
+
+## Colormaps: `viridis`
 
 <!-- .slide: data-background-image="images/viridis_3d.png" data-background-size="auto 75%" -->
 
 ---
 
-<!-- .slide: data-background-image="images/flag_3d.png" data-background-size="auto 75%" -->
+## Image Coloring
+
+<div class="fig-container" data-style="height: 600px;" data-file="figures/example_coloring_image.html" data-markdown=true>
+</div>
+
+---
+
+## Colormapping Images
+
+<div class="fig-container" data-style="height: 640px;" data-file="figures/apply_colormap.html" data-markdown=true>
+</div>
 
 ---
 
