@@ -2,6 +2,7 @@
 layout: week
 visible: true
 icon: undraw_cohort_analysis_stny.svg
+notitle: true
 examples:
   - filename: lecture05_examples.ipynb
     type: ipynb

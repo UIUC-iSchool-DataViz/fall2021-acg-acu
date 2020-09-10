@@ -2,6 +2,7 @@
 layout: week
 visible: true
 icon: undraw_version_control_9bpv.svg
+notitle: true
 examples: 
   - filename: lecture03_examples.ipynb
     type: ipynb
