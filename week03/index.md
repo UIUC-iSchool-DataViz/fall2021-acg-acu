@@ -8,6 +8,10 @@ examples:
     type: ipynb
     title: Matplotlib specifics
     description: This goes over some very specific aspects of matplotlib, and how to apply data transformations to patches and annotations, as well as modifying properties of the plot.
+  - filename: lecture06_examples.ipynb
+    type: ipynb
+    title: Colormaps
+    description: We load in a brain scan and try some basics of colormapping in matplotlib.
 ---
 
 # Transformations and Colors
