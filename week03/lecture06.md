@@ -62,7 +62,7 @@ http://enchroma.com/test/instructions/
 
 ## "Naming" Colors: HSV
 
-<div class="fig-container" data-style="height: 600px;" data-file="figures/hsv_space.html" data-markdown=true>
+<div class="fig-container" data-style="height: 650px;" data-file="figures/hsv_space.html" data-markdown=true>
 </div>
 
 ---
