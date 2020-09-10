@@ -34,7 +34,6 @@
     
     <script type="text/javascript">
 
-
         var image = new Image();
         var imageTexture;
         image.src = "../images/winter_scene.jpg";
@@ -60,7 +59,12 @@
             uniform float blue;
             uniform float alpha;
             void main() {
-              gl_FragColor = texture2D(texture, uv) * vec4(red, green, blue, alpha);
+              //gl_FragColor = texture2D(texture, uv) * vec4(red, green, blue, alpha);
+              vec4 sample = texture2D(texture, uv);
+              vec4 mix = vec4(red, green, blue, alpha);
+              sample = normalize(mix) * sample;
+              float intensity = sample.r + sample.g + sample.b;
+              gl_FragColor = vec4(intensity, intensity, intensity, 1);
             }`,
 
             vert: `
