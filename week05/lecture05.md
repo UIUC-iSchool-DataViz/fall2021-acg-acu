@@ -25,6 +25,38 @@ layout: lecture
 
 ---
 
+## "function of"
+
+---
+
+## Comparison
+
+ * Among Items
+   * One Variable, Few Categories: Column, or  collection of bars
+   * Two Variables: Variable Width Column Chart
+   * Many variables: Embedded table or charts
+ * Changing Over Time
+   * Many Periods, non-cyclical: Line chart
+   * Few Periods: Column or Line (depending on number of categories)
+
+---
+
+## Pandas
+
+ * [pandas.pydata.org](http://pandas.pydata.org/)
+ * Support for indexing, multi-indexing
+ * Data structures
+   * Series
+   * DataFrame
+   * Panel
+ * Groupby, select, aggregation features
+ * IO features
+   * Reading/writing CSV, HDF5
+   * Loading data from remote sources
+
+---
+
+
 # Interactivity
 
  * Interactivity -- brief review of terminology
