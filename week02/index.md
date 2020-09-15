@@ -30,3 +30,4 @@ palette of operations you can apply to data to visualize it.
  6. [IS452's Intro to Dictionaries](https://github.com/jnaiman/IS-452AO-Fall2019/blob/master/Lectures/Week-09-Dictionaries.ipynb)
  7. [Pandas Docs](https://pandas.pydata.org/pandas-docs/stable/)
  8. [NumPy Docs](https://docs.scipy.org/doc/numpy/reference/)
+ 9. [Did You Know Fonts Could Do That](https://venam.nixers.net/blog/unix/2020/09/14/playing_with_fonts.html)
