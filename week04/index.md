@@ -3,7 +3,11 @@ layout: week
 visible: true
 icon: undraw_under_construction_46pa.svg
 notitle: true
-examples: []
+examples:
+  - filename: lecture07_examples.ipynb
+    type: ipynb
+    title: Traitlets and Widgets
+    description: We start with some traitlets, linking and widgets stuff, and then move toward matplotlib and linking multiple widgets together
 ---
 
 # Basics of Interaction and Engines of Visualization
