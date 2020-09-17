@@ -16,7 +16,7 @@
 title: IS445 - Data Viz - BOG-BOU
 email: mjturk@illinois.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the course website for IS590DV in Fall 2019
+  This is the course website for IS445-BOG-BOU in Fall 2020
 baseurl: "/fall2020-BOG-BOU" # the subpath of your site, e.g. /blog
 url: "https://uiuc-ischool-dataviz.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  matthewturk
