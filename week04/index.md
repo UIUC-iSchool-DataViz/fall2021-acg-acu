@@ -8,6 +8,10 @@ examples:
     type: ipynb
     title: Traitlets and Widgets
     description: We start with some traitlets, linking and widgets stuff, and then move toward matplotlib and linking multiple widgets together
+  - filename: lecture08_examples.ipynb
+    type: ipynb
+    title: Basic bqplot
+    description: This shows some basics of bqplot, and how it works with traits and widgets
 ---
 
 # Basics of Interaction and Engines of Visualization
