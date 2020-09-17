@@ -1,3 +1,15 @@
+---
+title: Intro to bqplot
+layout: lecture
+tags:
+  - bqplot
+  - interactivity
+  - ipywidgets
+  - jupyter
+description: >-
+  We introduce the basics of bqplot
+---
+
 
 ## bqplot
 
@@ -62,16 +74,12 @@ display(fig)
 
 ---
 
-## Assignment 3
+## No Assignment this week
 
- * Using traitlets, widgets and bqplot, build a notebook that:
-   1. Uses the UFO datasets
-   2. Allows changing the x and y fields on a scatter plot from the UFO dataset
-   3. Displays tooltips when hovering over individual items
- * Build a second widget that displays binned, aggregate values where you can change:
-   1. The field to "bin"
-   2. The method of aggregation (sum, mean, min, max, count)
-   3. The number of bins
+This week we will not have an assignment.
+
+However, you are encouraged to *practice* the work we've done with `traitlets`,
+`ipywidgets` and `bqplot`.
 
 ---
 
@@ -79,12 +87,5 @@ display(fig)
 
 Today we are going to build comparisons with our (virtual) hands.
 
- * A Bit More Matplotlib
-   * Patches and elements
-   * "Projections"
-   * Polar projections
+ * A Bit More traitlets
  * Traitlets
-
----
-
-## Next Week: Lab all day
