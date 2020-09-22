@@ -3,6 +3,11 @@ layout: week
 visible: true
 icon: undraw_data_reports_706v.svg
 notitle: true
+examples:
+  - filename: lecture10_examples.ipynb
+    type: ipynb
+    title: bqplot with interactivity
+    description: We review last time's bqplot intro, then build out linked views with the interval selector
 ---
 
 # Exploring More Interactivity
