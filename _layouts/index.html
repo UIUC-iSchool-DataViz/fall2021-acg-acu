@@ -94,7 +94,7 @@ layout: default
                     {% if example.type == "ipynb" %}
                     <a href="nbv.html?notebook_name={{f.dir | append: example.filename | relative_url | url_encode }}">{{example.title}}</a>
                     {% else %}
-                    <a href="{{example.filename | relative_url }}">{{example.title}}</a>
+                    <a href="{{f.dir | append: example.filename | relative_url }}">{{example.title}}</a>
                     {% endif %}
                 </p>
             </div>

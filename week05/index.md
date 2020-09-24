@@ -8,6 +8,18 @@ examples:
     type: ipynb
     title: bqplot with interactivity
     description: We review last time's bqplot intro, then build out linked views with the interval selector
+  - filename: vega_example_1.html
+    type: vega-lite
+    title: vega-lite example 1
+    description: A bar chart with some scaling and aggregation
+  - filename: vega_example_2.html
+    type: vega-lite
+    title: vega-lite example 2
+    description: Manually supplied data values for a circle chart
+  - filename: vega_example_3.html
+    type: vega-lite
+    title: vega-lite example 3
+    description: Filtered horsepower cars chart
 ---
 
 # Exploring More Interactivity
@@ -35,6 +47,6 @@ construction.
 
  * [UFO Sitings Dataset](https://uiuc-ischool-dataviz.github.io/spring2019online/week04/data/ufo-scrubbed-geocoded-time-standardized-00.csv)
  * [Michigan Depth Map](https://uiuc-ischool-dataviz.github.io/spring2019online/week05/data/michigan_lld.flt)
- * [Wealth of Nations Data](https://uiuc-ischool-dataviz.github.io/spring2019online/week06/data_and_libs/nations.json)
+ * [Wealth of Nations Data](https://uiuc-ischool-dataviz.github.io/spring2019online/week06/data_and_libs/nations.html)
  * [Github Pages](https://pages.github.com/)
 
