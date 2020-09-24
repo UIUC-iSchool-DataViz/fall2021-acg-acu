@@ -298,7 +298,7 @@ From the vega-lite examples, you can make a bar chart that is an aggregate like 
   "encoding": {
     "x": {
       "bin": true,
-      "field": "IMDB_Rating",
+      "field": "IMDB Rating",
       "type": "quantitative"
     },
     "y": {
