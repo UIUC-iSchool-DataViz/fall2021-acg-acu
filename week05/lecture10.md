@@ -206,16 +206,20 @@ Other environments, like Visual Studio Code or Atom, also work well for this.
 
 Create a file -- you can do this within JupyterHub or from the command line -- called `index.html`.  It can contain anything, for instance:
 
-```{html}
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
-</html>
+```html
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;This is the title of the webpage!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;p&gt;
+      This is an example paragraph. Anything in the &lt;strong&gt;body&lt;/strong&gt;
+      tag will appear on the page, just like this &lt;strong&gt;p&lt;/strong&gt;
+      tag and its contents.
+      &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 ```
 
 ---
@@ -239,9 +243,46 @@ where `username` is, again, your username.
 
 ---
 
-# vega-lite editor
+# vega-lite
+
+Up until now, we have *mostly* written code that is _imperative_.
+
+This means we have described *how* we wanted to have things accomplished,
+rather than *what* we want to accomplish.  vega-lite is a declarative grammar
+for (interactive) visualizations that allows us to specify the connection between components.
+
+We will utilize an interactive editor for vega-lite.  This helps us to ease
+some of the pains of correctly writing JSON, of knowing what we can and cannot
+use in a given spot, and it also provides us with lots of [sample
+datasets](https://github.com/vega/vega-datasets).
 
 https://vega.github.io/editor/#/custom/vega-lite
+
+---
+
+## vega-lite: specification
+
+vega-lite visualizations are defined in a JSON specification.  This
+specification will typically take a form similar to this:
+
+```json
+{
+  "data": .. ,
+  "transform": [ .. ],
+  "mark": .. ,
+  "selection": .. ,
+  "encoding": .. ,
+  "config": ..
+}
+```
+
+The syntax you will need to be the most familiar with:
+
+ * [`mark`](https://vega.github.io/vega-lite/docs/mark.html): how to visually represent something
+ * [`encoding`](https://vega.github.io/vega-lite/docs/encoding.html): the translation between data and the mark
+ * [`aggregate`](https://vega.github.io/vega-lite/docs/encoding.html): operating over a collection of points -- `mean`, `sum`, `median`,
+   `min`, `max`, `count`
+ * [`type`](https://vega.github.io/vega-lite/docs/type.html): `quantitative`, `temporal`, `ordinal`, or `nominal`
 
 ---
 
@@ -276,16 +317,5 @@ There are several mechanisms by which we describe data representations in
 vega-lite, but the overarching principle is that it is declarative.  We define
 what it does based on what we say we want it to look like.
 
-The place where this is no longer true is when we modify `datum` values.
-
----
-
-# vega-lite syntax
-
-The syntax you will need to be the most familiar with:
-
- * `mark`: how to visually represent something
- * [`encoding`](https://vega.github.io/vega-lite/docs/encoding.html): the translation between data and the mark
- * `aggregate`: operating over a collection of points -- `mean`, `sum`, `median`,
-   `min`, `max`, `count`
- * `type`: `quantitative`, `temporal`, `ordinal`, or `nominal`
+(The place where this is no longer true is when we modify `datum` values, but
+we'll get to that next time.)
