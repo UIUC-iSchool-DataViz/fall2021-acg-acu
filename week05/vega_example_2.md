@@ -1,4 +1,9 @@
-```json
+---
+title: vega-lite example 2
+description: Manually supplied data values for a circle chart
+layout: vegalite_example
+---
+
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "data": {
@@ -16,4 +21,3 @@
         "size": { "field": "C", "type": "quantitative"}
     }
 }
-```
