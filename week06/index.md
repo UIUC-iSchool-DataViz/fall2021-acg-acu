@@ -2,6 +2,7 @@
 layout: week
 visible: true
 icon: undraw_metrics_gtu7.svg
+notitle: true
 examples: []
 ---
 
