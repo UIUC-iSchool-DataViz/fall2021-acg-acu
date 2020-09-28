@@ -1,8 +1,10 @@
 ---
 layout: week
-visible: false
+visible: true
+icon: undraw_metrics_gtu7.svg
+examples: []
 ---
 
-# Week 6 - Starting Dashboards and Vega Lite
+# Viz engines, vega-lite and the web
 
-We do some more bqplot marks, we start a dashboard, and we learn vega-lite.
+This week we covered some characteristics to use when evaluating visualization engines, as well as going more in detail about vega-lite and how to use it on a website.
