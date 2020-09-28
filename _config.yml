@@ -27,7 +27,6 @@ markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 theme: jekyll-theme-dinky
 plugins:
-  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
