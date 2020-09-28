@@ -7,4 +7,6 @@ examples: []
 
 # Viz engines, vega-lite and the web
 
-This week we covered some characteristics to use when evaluating visualization engines, as well as going more in detail about vega-lite and how to use it on a website.
+This week we covered some characteristics to use when evaluating visualization
+engines, as well as going more in detail about vega-lite and how to use it on a
+website.
