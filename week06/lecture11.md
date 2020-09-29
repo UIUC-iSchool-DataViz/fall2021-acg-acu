@@ -252,3 +252,15 @@ We can define a box-based selector that operates along the x axis by specifying 
 
 Let's try this.
 
+---
+
+## Using vega-lite with your own data
+
+We will utilize Jupyterlab to visualize data using vega-lite, including our
+Building Inventory, after we prepare it.
+
+When you log in to the JupyterHub at the iSchool, you can replace the `tree`
+component of the URL with `lab` and see a new user interface.
+
+We will edit files ending in `.vg`, and they can access files we prepare in
+notebooks.
