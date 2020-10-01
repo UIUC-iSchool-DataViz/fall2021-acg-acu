@@ -5,6 +5,7 @@ tags:
   - vega-lite
   - web
   - javascript
+  - github-pages
 description: >-
   We introduce a little bit of javascript, how to publish websites on GitHub,
   and we start learning vega-lite.
