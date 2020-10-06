@@ -8,7 +8,7 @@ tags:
   - github-pages
 include_twitter: true
 description: >-
-  We have a few odds-and-ends to cover.  Today we'll cover some time series axes, go a bit deeper into git, and fall back to glitch for some web hosting.
+  Today we'll cover some time-series axes, use bqplot to display a Map and talk about how to use Pandas for time-series data.
 ---
 
 ## Today
