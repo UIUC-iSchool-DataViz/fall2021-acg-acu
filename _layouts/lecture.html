@@ -78,7 +78,9 @@
 {% if page.setup_script %}
 <script src="{{ page.setup_script }}"></script>
 {% endif %}
-
+{% if page.include_twitter %}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endif %}
   </body>
 </html>
 
