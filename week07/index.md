@@ -12,7 +12,7 @@ examples:
 
 # Time Series and Maps
 
-This week we return to bqplot a bit, where we will look at time series data and maps.
+This week we dig deeper into maps and geospatial visualizations.
 
 ## References and Reading List
 
