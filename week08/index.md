@@ -8,6 +8,10 @@ examples:
     type: ipynb
     title: Dashboards and a few maps
     description: We show a little bit of cartopy, then move on to our dashboard again.
+  - filename: lecture16_examples.ipynb
+    type: ipynb
+    title: Expanding our dashboard with subselection
+    description: We build out some pandas skills and use that to do filtering and linking
 ---
 
 # More Maps
