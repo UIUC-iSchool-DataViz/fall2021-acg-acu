@@ -3,7 +3,11 @@ layout: week
 visible: true
 icon: undraw_Around_the_world_re_n353.svg
 notitle: true
-examples: []
+examples:
+  - filename: lecture15_examples.ipynb
+    type: ipynb
+    title: Dashboards and a few maps
+    description: We show a little bit of cartopy, then move on to our dashboard again.
 ---
 
 # More Maps
