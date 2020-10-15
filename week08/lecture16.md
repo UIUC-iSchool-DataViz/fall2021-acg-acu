@@ -10,17 +10,6 @@ description: >-
   Today we'll talk about map projections, how to properly wrap a baseball, and continue with our dashboarding.
 ---
 
-## Today
-
- * Visualization reports
- * Talk a little about maps
- * Intro CartoPy
- * Continue with our bqplot interactivity
-
-Alternately, we can move the middle two items to Thursday.
-
----
-
 ## Visualization Reports
 
 ---
