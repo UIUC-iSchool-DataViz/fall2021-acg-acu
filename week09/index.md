@@ -6,7 +6,7 @@ notitle: true
 examples: []
 ---
 
-# Week 9 - Javascript, Iodide, Reports and Interoperability
+# Javascript, Iodide, Reports and Interoperability
 
 This week we started looking at a new tool called [iodide](https://iodide.io) from Mozilla for generating reports and exploring Javascript.
 
