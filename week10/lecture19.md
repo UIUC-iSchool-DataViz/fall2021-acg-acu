@@ -187,6 +187,24 @@ embedded4.then( function(res) {
 
 ---
 
+## Example 1
+
+We're going to set up a contrived example.  In [iodide](https://iodide.io/) we will:
+
+ 1. Create a simple HTML report
+ 2. Create a listener button for adding a new data point
+ 3. Create a listener button for removing a random data point
+
+---
+
+## Example 2 (Advanced-ish)
+
+We're going to create a "Character Widget" to show characteristics, like in an RPG, of a set of characters.
+
+We'll add buttons to update their hit points.
+
+---
+
 ## GeoJSON I - Intro
 
 http://geojson.org/ and http://geojson.io/
@@ -203,24 +221,6 @@ http://geojson.org/ and http://geojson.io/
   }
 }
 ```
-
----
-
-## Example 1
-
-We're going to set up a contrived example.  In [iodide](https://iodide.io/) we will:
-
- 1. Create a simple HTML report
- 2. Create a listener button for adding a new data point
- 3. Create a listener button for removing a random data point
-
----
-
-## Example 2 (Advanced-ish)
-
-We're going to create a "Character Widget" to show characteristics, like in an RPG, of a set of characters.
-
-We'll add buttons to update their hit points.
 
 ---
 
