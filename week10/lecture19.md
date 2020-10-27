@@ -1,82 +1,24 @@
 ---
-title: Lecture 9
+title: Geo Data and Vega-lite API
 layout: lecture
+tags:
+  - javascript
+  - iodide
+  - geo
 include_vega: true
 setup_script: setup_script.js
+description: >-
+  We'll discuss a bit about updating vega-lite visualizations using their API in Iodide, and we'll move on to looking at GeoJSON data in Jupyter and what it looks like.
 ---
 
-<!-- .slide: class="titleslide" -->
-
-# Data Visualization
-
-<div style="height: 6.0em;"></div>
-
-## Matthew Turk
-## Fall 2019
-## Lecture 10
+## Visualization Reports
 
 ---
 
-## GeoJSON I - Intro
+## Today
 
-http://geojson.org/ and http://geojson.io/
-
-```json
-{
-  "type": "Feature",
-  "geometry": {
-    "type": "Point",
-    "coordinates": [125.6, 10.1]
-  },
-  "properties": {
-    "name": "Dinagat Islands"
-  }
-}
-```
-
----
-
-## GeoJSON II - Primitive Types
-
-GeoJSON defines several primitive types:
-
- * `Point` with associated `coordinates` (single set of two)
- * `LineString` with associated `coordinates` that are lists of two items each
- * `Polygon` with holes able to be cut out of it
-
-Multi-part types are defined out of these.
-
----
-
-## GeoJSON III - MultiPart Types
-
-These are combined into multi-part types as follows:
-
- * `MultiPoint`
- * `MultiLineString`
- * `MultiPolygon`
-
----
-
-## Example: Champaign Data
-
-Go to champaignil.gov .  We will visualize some of this data, such as:
-
- * Trees
- * Zoning
- * etc...
-
----
-
-## Updating Data in vega-lite
-
-We can change the visible data in vega-lite.  We'll do this with some simple data, and then try our hand at a simple role playing game.
-
----
-
-## Glitch
-
-We will be using Glitch to do this.  It simplifies web deployment.
+ * vega-lite API
+ * Geo data formats 
 
 ---
 
@@ -85,6 +27,12 @@ We will be using Glitch to do this.  It simplifies web deployment.
  * Reaction to new, incoming data
  * Modify based on some set of inputs that can't be bound to vega-lite events
  * Static visualization, changing view
+
+---
+
+## Updating Data in vega-lite
+
+We can change the visible data in vega-lite.  We'll do this with some simple data, and then try our hand at a simple role playing game.
 
 ---
 
@@ -237,15 +185,71 @@ embedded4.then( function(res) {
 
 (Wait, what happened ...?)
 
+---
+
+## GeoJSON I - Intro
+
+http://geojson.org/ and http://geojson.io/
+
+```json
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [125.6, 10.1]
+  },
+  "properties": {
+    "name": "Dinagat Islands"
+  }
+}
+```
 
 ---
 
-## Voilà
+## Example 1
 
-voilà is a system for constructing Jupyter-based dashboards.
+We're going to set up a contrived example.  In [iodide](https://iodide.io/) we will:
 
-Let's try it out:
+ 1. Create a simple HTML report
+ 2. Create a listener button for adding a new data point
+ 3. Create a listener button for removing a random data point
 
-```bash
-conda install voila
-```
+---
+
+## Example 2 (Advanced-ish)
+
+We're going to create a "Character Widget" to show characteristics, like in an RPG, of a set of characters.
+
+We'll add buttons to update their hit points.
+
+---
+
+## GeoJSON II - Primitive Types
+
+GeoJSON defines several primitive types:
+
+ * `Point` with associated `coordinates` (single set of two)
+ * `LineString` with associated `coordinates` that are lists of two items each
+ * `Polygon` with holes able to be cut out of it
+
+Multi-part types are defined out of these.
+
+---
+
+## GeoJSON III - MultiPart Types
+
+These are combined into multi-part types as follows:
+
+ * `MultiPoint`
+ * `MultiLineString`
+ * `MultiPolygon`
+
+---
+
+## Example: Champaign Data
+
+Go to champaignil.gov .  We will visualize some of this data, such as:
+
+ * Trees
+ * Zoning
+ * etc...

@@ -1,8 +1,8 @@
 ---
 layout: week
-visible: false
+visible: true
 ---
 
-# Week 10 - Geo Data, Dashboards, Web Dev
+# Week 10 - Type of viz, geo data, and dashboards
 
-We went over GeoJSON, made a few visualizations using Champaign data, and talked about dashboards and web dev.
+This week we covered some ways to think about different classes of visualization, geo data, and how to construct dashboards using packages that build on what we've already learned.
