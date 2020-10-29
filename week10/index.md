@@ -1,6 +1,9 @@
 ---
 layout: week
 visible: true
+icon: undraw_Books_l33t.svg
+notitle: true
+examples: []
 ---
 
 # Type of viz, geo data, and dashboards
