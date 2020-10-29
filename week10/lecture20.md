@@ -252,6 +252,7 @@ allow="encrypted-media" allowfullscreen></iframe>
 notes:
 This is from Chris Havlin, and it's vorticity of a tornado
 
+---
 
 ## Viz for Experts
 
