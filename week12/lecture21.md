@@ -113,7 +113,11 @@ For this, we will be using Python to collaboratively explore what volume-filling
 Install yt and ipyvolume.
 
 ```
-conda install -c conda-forge yt ipyvolume
+!pip install install cython sympy unyt pooch
+```
+
+```
+!pip install git+https://github.com/yt-project/yt.git
 ```
 
 ---
@@ -122,11 +126,9 @@ conda install -c conda-forge yt ipyvolume
 
 We will acquire a bit of data.
 
-Go to https://yt-project.org/data/ and download "[IsolatedGalaxy](http://yt-project.org/data/IsolatedGalaxy.tar.gz)" and uncompress it.
-
 ```python
 import yt
-ds = yt.load("IsolatedGalaxy/galaxy0030/galaxy0030")
+ds = yt.load_sample("IsolatedGalaxy")
 
 ds.r[:].max("density", axis="z")
 
