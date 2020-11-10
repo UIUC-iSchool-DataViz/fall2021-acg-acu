@@ -1,8 +1,11 @@
 ---
 layout: week
-visible: false
+visible: true
+icon: undraw_medical_research_qg4d.svg
+notitle: true
+examples: []
 ---
 
-# Week 12 - Scientific Viz, Big-ish Data, and Some Portfolio Building
+# Week 12 - Scientific Viz
 
-Today we went over the basics of scientific visualization and talked about building a portfolio.
+This week we covered some principles of Scientific Visualization.
