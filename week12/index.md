@@ -6,6 +6,6 @@ notitle: true
 examples: []
 ---
 
-# Week 12 - Scientific Viz
+# Scientific Viz
 
 This week we covered some principles of Scientific Visualization.
