@@ -5,7 +5,8 @@ tags:
   - d3
   - javascript
 description: >-
-  
+  This week we introduce concepts from D3, including data binding, thinking
+  about the document object model, and how to set up a D3 playground.
 ---
 
 ## A Little Bit of D3
@@ -15,14 +16,22 @@ We're going to learn a very small bit of [d3.js](https://d3js.org/).
 The easiest way to utilize D3 is through [observablehq.com](https://observablehq.com):
 
 ```
-d3 = require("d3@5");
+d3 = require("d3@6");
 ```
 
 although it is straightforward to include the necessary code in an HTML page:
 
 <code>
-&lt;script src="https://d3js.org/d3.v5.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://d3js.org/d3.v6.min.js"&gt;&lt;/script&gt;
 </code>
+
+---
+
+## Time to Vote!
+
+Do we want to learn a new platform today?
+
+Should we dive into Observable, or should we stick with Iodide?
 
 ---
 
@@ -131,27 +140,21 @@ Let's try it out!
 
 ---
 
-## Review of D3 Basics
-
-Last week we covered the very basics of [d3.js](https://d3js.org/), using
-[observablehq.com](https://observablehq.com).
-
-Review topics:
-
- * Creating a canvas
- * Adding items to the canvas
- * Positioning items
-
----
-
 ## Creating an SVG canvas
+
+We can create one programmatically:
 
 ```javascript
 const svg = d3.create("svg")
+  .attr("id", "my_svg")
   .attr("width", 300)
   .attr("height", 300);
+```
 
-yield svg.node();
+or, in Iodide, we can create one through standard HTML:
+
+```
+<svg id="my_svg">
 ```
 
 ---
@@ -219,29 +222,15 @@ built in, but you can choose to build your own.
 
 ---
 
-## Observable Notes: Data
+## D3 Notes: HTML
 
-There are ways to get data into observable.  The simplest is to use `await` on an asynchronous loading function, like this:
-
-```
-var near_earth = await d3.json("https://data.nasa.gov/resource/2vr3-k9wn.json");
-```
-
-(More ideas at https://github.com/jdorfman/awesome-json-datasets )
-
----
-
-## Observable Notes: HTML
-
-You can specify HTML as well, and then modify that in code.  This does not always require that you yield nodes.
+Anything that is in the DOM can be selected by, and modified by, D3.
 
 ```
-html`<p id="my_hi">hi there</p>`
+`<p id="my_hi">hi there</p>`
 ```
 
-These can be selected by d3 as well.
-
-In fact, we can modify *any* item in the DOM, not just SVG elements.  Can we modify this paragraph?
+How might we modify this paragraph?
 
 ---
 
@@ -337,16 +326,7 @@ Interpolation of paths can be tricky, but it is possible.
 
 ---
 
-## Experiment Time
+## End for now ...
 
-Let's build a near-earth object explorer.
-
- * Sketch out a design in groups
- * Discuss as a class the different designs
- * Build as a class 
-
----
-
-## Exporting to a webpage
-
-Now how do we export this to a webpage?
+Next time, we will bring this all together with our data visualization
+techniques and export to a webpage.
