@@ -6,7 +6,7 @@ notitle: true
 examples: []
 ---
 
-# Week 13 - Dynamics and Interaction in D3
+# Dynamics and Interaction in D3
 
 This week we discussed how to develop dynamic D3 visualizations and
 interactivity in those visualizations, as well as how to use different scales
