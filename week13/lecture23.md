@@ -1,34 +1,100 @@
 ---
-title: Lecture 13
+title: Dynamics in D3
 layout: lecture
----
-
-<!-- .slide: class="titleslide" -->
-
-# Data Visualization
-
-<div style="height: 6.0em;"></div>
-
-## Matthew Turk
-## Fall 2019
-## Lecture 13
-
+tags:
+  - d3
+  - javascript
+description: >-
+  This week we talked about using D3 for transitions, interaction, and we started sketching out our final project.
 ---
 
 # Housekeeping
 
  * Having issues with uploading notebooks that will be corrected.
- * Next week: we will be presenting in groups!
- * Order to be announced by end of this week, once all groups are in.
+ * Starting after Thanksgiving break, we will be doing group presentations.
+ * Order to be announced after groups assigned.
 
 ---
 
-# Article
+# Final Project
 
-An [interesting
-article](https://medium.com/multiple-views-visualization-research-explained/same-data-multiple-perspectives-curse-of-knowledge-in-visual-data-communication-d827c381f936)
-from this Cindy Xiong on Medium discusses the "curse of expertise" in data
-visualization.
+Your final project, to be completed in (assigned) groups, is to build a semi-realtime "observatory" of data.  You can find a few different possibilities for the data, but I want to encourage you to think of data related to things like:
+
+ * Earthquakes
+ * Space weather, rocks and satellites
+ * Weather
+ * Political events and news
+
+---
+
+# Final Project: Phases
+
+Your final project will have three phases, each of which will have a component for you to turn in.  The second and third components will be turned in as a group, but the first component will be individually graded.
+
+**Before beginning, clear your dataset with me and Mohammad.**
+
+Some places to look for dataset ideas:
+
+ * [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
+ * [Public APIs](https://github.com/public-apis/public-apis)
+ * [Awesome JSON](https://github.com/jdorfman/awesome-json-datasets)
+
+---
+
+# Final Project: Part One
+
+The first part of your project will be to *explore* the data; this is worth
+**30 points out of 100**.  You are to turn in a notebook -- whether in
+Observable, Python, Iodide, or a *combination* of them, that includes every
+single cell and step you took in exploring the data.  This is an example of the
+"visualization for self" process.  This means you might take shortcuts, you
+might make mistakes, and you might make really, really awful visualizations.
+
+Showing that you explored the data individually (even if you did it while
+talking to a collaborator or classmate) is enough to satisfy this portion of
+the project.
+
+Download the data.  Dig in to it.  Look at it.  Find interesting things.
+Experiment.  Make plots, make summary statistics, and make it familiar to
+yourself.
+
+---
+
+# Final Project: Part Two
+
+The second component of your project will be to design your "observatory." Note
+that this is *pseudo*-realtime.  It does not need to *automatically* update its
+data; a refresh button, or requiring a page reload, is sufficient.  This is
+worth **40 points out of 100**.
+
+This could consist of drawings, prototypes of web pages or notebooks, and the
+code necessary to build the different components.  This component is
+*scaffolding*, not the final product.  It should be thought of as the "viz for
+peers" stage of the process.  You can submit drawings (including photos of
+drawings), jamboards, notebooks (which you *are* allowed to clean up), and
+stages of prototypes.
+
+You should walk me through the process of how you built your observatory, and
+it does not need to be a linear, successes-only process.
+
+---
+
+# Final Project: Part Three
+
+The final component of your project will be an in-class presentation of your
+work, and the deployment of that work online.  This will be worth **30 points
+out of 100**.
+
+Your "observatory" should be located somewhere online, either as a notebook I
+can download and run (or that runs on [binder](https://mybinder.org/)) or view
+on observable, iodide, or Github Pages.
+
+You will also have five minutes, as a *group*, to present your work in class.
+This presentation needs to include the final product, as well as a summary of
+any stumbling blocks you might have had, and a little bit of the process.
+
+These presentations will be on the 3rd and 8th of December.  The project will
+be due on the 8th.
 
 ---
 

@@ -1,8 +1,13 @@
 ---
 layout: week
-visible: false
+visible: true
+icon: undraw_monitor_iqpq.svg
+notitle: true
+examples: []
 ---
 
-# Week 13 - Some more D3
+# Week 13 - Dynamics and Interaction in D3
 
-Today we concluded by doing a bit more with D3, and demonstrating how to make your data visualizations more dynamic.
+This week we discussed how to develop dynamic D3 visualizations and
+interactivity in those visualizations, as well as how to use different scales
+in D3.
