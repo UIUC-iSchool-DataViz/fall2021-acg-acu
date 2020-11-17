@@ -63,7 +63,7 @@ yourself.
 # Final Project: Part Two
 
 The second component of your project will be to design your "observatory." Note
-that this is *pseudo*-realtime.  It does not need to *automatically* update its
+that this is *pseudo* realtime.  It does not need to *automatically* update its
 data; a refresh button, or requiring a page reload, is sufficient.  This is
 worth **40 points out of 100**.
 
