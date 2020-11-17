@@ -136,6 +136,7 @@ var dataset = [
 svg.selectAll("circle")
    .data(dataset)
    .enter()
+   .append("circle")
    .attr("cx", d => xScale(d.x1))
    .attr("cy", d => yScale(d.y1))
    .attr("r", d => d.radius)
