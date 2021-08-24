@@ -5,28 +5,28 @@ instructor:
   office_hours: By appointment
 tas:
   -
-    name: Mohammad Amanzadeh
-    email: amanzad2@illinois.edu
+    name: Tzu-Kun Hsiao
+    email: tkhsiao2@illinois.edu
     office: Online!
-    office_hours: Wednesday, 2PM-3PM
+    office_hours: Appointment
 course:
   name: Data Visualization
   number: IS445
-  semester: Fall 2020
-  section: BOG-BOU
-  location: Online
-  time: Tuesday and Thursday, 9:30AM-10:50AM
+  semester: Fall 2021
+  section: ACG-ACU
+  location: Armory 331 and Online
+  time: Tuesday and Thursday, 11:00AM-12:20PM
   credit_hours: 4
 urls:
   -
     name: Slack
-    url: https://is445-fall2020.slack.com/
+    url: https://is445-fall2021.slack.com/
   - 
     name: Moodle
-    url: https://learn.illinois.edu/course/view.php?id=50825
+    url: https://learn.illinois.edu/course/view.php?id=61710
   -
     name: Course Materials
-    url: https://uiuc-ischool-dataviz.github.io/fall2020-BOG-BOU/
+    url: https://uiuc-ischool-dataviz.github.io/fall2021-acg-acu/
   -
     name: Github
-    url: https://github.com/UIUC-iSchool-DataViz/fall2020-BOG-BOU/
+    url: https://github.com/UIUC-iSchool-DataViz/fall2021-acg-acu/
