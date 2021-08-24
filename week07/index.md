@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: true
+visible: false
 icon: undraw_forming_ideas_0pav.svg
 notitle: true
 examples: 

@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: true
+visible: false
 icon: undraw_programmer_imem.svg
 notitle: true
 examples: []

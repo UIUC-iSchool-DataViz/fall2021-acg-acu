@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: true
+visible: false
 icon: undraw_version_control_9bpv.svg
 notitle: true
 examples: 

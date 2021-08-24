@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: true
+visible: false
 icon: undraw_under_construction_46pa.svg
 notitle: true
 examples:

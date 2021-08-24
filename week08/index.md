@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: true
+visible: false
 icon: undraw_Around_the_world_re_n353.svg
 notitle: true
 examples:

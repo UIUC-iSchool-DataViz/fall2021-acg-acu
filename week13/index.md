@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: true
+visible: false
 icon: undraw_monitor_iqpq.svg
 notitle: true
 examples: []
