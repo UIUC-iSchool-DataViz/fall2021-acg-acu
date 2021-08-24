@@ -7,7 +7,7 @@ tags:
 description: >-
   The syllabus for the course, along with discussions about "what"
   visualizations are, and how to orient yourself in the course.
-date: 2020-08-25
+date: 2021-08-24
 ---
 
 ## Land Acknowledgment
@@ -21,14 +21,14 @@ Website.](https://chancellor.illinois.edu/land_acknowledgement.html)
 <!-- .slide: class="vertical_center" -->
 ## Basics
 
-9:30AM-10:50AM on Tuesdays and Thursdays, online
+11:00AM-12:20PM on Tuesdays and Thursdays, Armory 331 and Online.
 
 Matthew Turk - `mjturk@illinois.edu`
 Office Hours: By appointment
 
-TA Mohammad Amanzadeh `amanzad2@illinois.edu`
+TA Tzu-Kun (Esther) Hsiao `tkhsiao2@illinois.edu`
 
-https://uiuc-ischool-dataviz.github.io/fall2020-BOG-BOU/
+https://uiuc-ischool-dataviz.github.io/fall2021-acg-acu/
 
 ---
 
@@ -36,7 +36,7 @@ https://uiuc-ischool-dataviz.github.io/fall2020-BOG-BOU/
 
 I will attempt to:
 
- * Livestream via Zoom (and possibly Twitch)
+ * Livestream via Zoom (and possibly [twitch.tv/powersoffour](https://twitch.tv/powersoffour))
  * Monitor slack for questions and zoom for "raised hands"
  * Record lectures to post them at a later date
 
@@ -45,8 +45,8 @@ I will attempt to:
 ## Summary of Locations
 
  * Grades and assignments will be on [Moodle](https://learn.illinois.edu/).
- * Course repo is at [UIUC-iSchool-DataViz/fall2020-BOG-BOU](https://github.com/UIUC-iSchool-DataViz/fall2020-BOG-BOU/), automatically built at [uiuc-ischool-dataviz.github.io/fall2020-BOG-BOU/](https://uiuc-ischool-dataviz.github.io/fall2020-BOG-BOU). Lecture notes, notebooks, data and course info will be placed there.
- * Slack is the best place to ask questions: https://is445-fall2020.slack.com/
+ * Course repo is at [UIUC-iSchool-DataViz/fall2021-acg-acu](https://github.com/UIUC-iSchool-DataViz/fall2021-acg-acu/), automatically built at [uiuc-ischool-dataviz.github.io/fall2021-acg-acu/](https://uiuc-ischool-dataviz.github.io/fall2021-acg-acu). Lecture notes, notebooks, data and course info will be placed there.
+ * Slack is the best place to ask questions: https://is445-fall2021.slack.com/
 
 You are invited to clone the repo, fork and submit changes (typos, etc!), and
 to use any information in it in the future.
@@ -68,7 +68,7 @@ In advance of class today, you were asked to take a "quiz" online.  We're now go
 
 I'm going to send you into breakout rooms and give you about ten minutes.  
 
-https://bit.ly/32mfIf7
+https://bit.ly/3jcRRYZ
 
 On your group's number, visualize your results.
 
@@ -353,10 +353,10 @@ submission.
 We will be sharing a slack channel with the online-only class, so feel free to
 converse with them as well!
 
-Team is at `is445-fall2020.slack.com` and we share it with the other section
+Team is at `is445-fall2021.slack.com` and we share it with the other section
 
  * `#general` : General announcements
- * `#is445-fall2020-bog-bou` : Specific questions/issues for *this* class.
+ * `#is445-fall2021-acg-acu` : Specific questions/issues for *this* class.
  * `#random` : see a cool viz you want to share?  This is the place!
 
 ---
@@ -388,8 +388,8 @@ feedback.  However, please do behave in a professional fashion.
 
 ## Github
 
- * Course repo is at [UIUC-iSchool-DataViz/fall2020-BOG-BOU](https://github.com/UIUC-iSchool-DataViz/fall2020-BOG-BOU/)
- * Automatically built to [uiuc-ischool-dataviz.github.io/fall2020-BOG-BOU/](https://uiuc-ischool-dataviz.github.io/fall2020-BOG-BOU/)
+ * Course repo is at [UIUC-iSchool-DataViz/fall2021-acg-acu](https://github.com/UIUC-iSchool-DataViz/fall2021-acg-acu/)
+ * Automatically built to [uiuc-ischool-dataviz.github.io/fall2021-acg-acu/](https://uiuc-ischool-dataviz.github.io/fall2021-acg-acu/)
  * Copy the notebooks to your directory before using them.
  * Supplemental materials can be found at [UIUC-iSchool-DataViz/support-files](https://github.com/UIUC-iSchool-DataViz/support-files)
 
