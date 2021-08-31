@@ -99,7 +99,7 @@ var urlParams;
       console.log("notebook loaded");
       var data = JSON.parse(request.responseText);
       var target = document.getElementById("notebook");
-      nbv.render(data, target);
+      nbv_constructor(d, { katex: window.katex, prism: window.Prism, marked: window.marked, }).render(data, target);
     } else {
       // We reached our target server, but it returned an error
       console.log("notebook not found error");
