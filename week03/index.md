@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: false
+visible: true
 icon: undraw_cohort_analysis_stny.svg
 notitle: true
 examples:
