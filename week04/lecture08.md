@@ -74,12 +74,20 @@ display(fig)
 
 ---
 
-## No Assignment this week
+## Assignment 2
 
-This week we will not have an assignment.
+Using matplotlib, construct a visualization of the Illinois Building Inventory
+that communicates the following information:
 
-However, you are encouraged to *practice* the work we've done with `traitlets`,
-`ipywidgets` and `bqplot`.
+ * Relationship between the year acquired and the year constructed
+ * Total square footage as a function of congressional district
+ * Average square footage per floor as a function of congressional district
+ * Square footage for the five most common departments as a function of year
+
+Each component will be worth 5 points and *must* be a completely communicative
+visualization -- including labels and a one paragraph writeup of successes and
+shortcomings in your approach.  Submit a notebook to Moodle.  All source code
+must be in these files.
 
 ---
 
@@ -87,5 +95,6 @@ However, you are encouraged to *practice* the work we've done with `traitlets`,
 
 Today we are going to build comparisons with our (virtual) hands.
 
+ * Beginning bqplot
  * A Bit More traitlets
- * Traitlets
+ * Making things display nicely
