@@ -95,6 +95,7 @@ must be in these files.
 
 Today we are going to build comparisons with our (virtual) hands.
 
+ * Getting a working jupyterlab environment
  * Beginning bqplot
  * A Bit More traitlets
  * Making things display nicely
