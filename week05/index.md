@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: false
+visible: true
 icon: undraw_data_reports_706v.svg
 notitle: true
 examples:
