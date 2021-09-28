@@ -323,7 +323,7 @@ we'll get to that next time.)
 
 ---
 
-## Assignment 4
+## Assignment 3
 
 Your assignment for this week is to build a web page on GitHub pages (which can
 be with a "burner account", as long as you supply that info to us) that
