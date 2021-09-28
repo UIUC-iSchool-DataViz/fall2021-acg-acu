@@ -115,7 +115,7 @@ interpreted:
 
 ---
 
-## Assignment 5
+## Assignment 4
 
 Your assignment is to pick four of the following possibilities and write up a
 set of comparisons for constructing the *same* visualization.   You must evaluate matplotlib, vega-lite and bqplot, and you can choose one of the following in addition: D3, Bokeh, Plotly, R/RStudio.
