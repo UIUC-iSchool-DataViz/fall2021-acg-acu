@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: false
+visible: true
 icon: undraw_Books_l33t.svg
 notitle: true
 examples: []
