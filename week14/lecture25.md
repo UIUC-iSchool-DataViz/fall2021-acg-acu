@@ -5,37 +5,7 @@ tags:
   - d3
   - javascript
 description: >-
-  This week we talked about using D3 for transitions, interaction, and we started sketching out our final project.
----
-
-# Final Project
-
-Look, it's a trying time for everybody.
-
-[ some explanation of what's up with me goes here ] <!-- .element: class="fragment" -->
-
----
-
-# Final Project
-
-There were three big parts:
-
- * Exploration
- * Conceptualization
- * Implementation
-
-On Tuesday, you will all present phase two, conceptualization.  You will be
-strictly held to a time limit of 5 minutes.
-
-You will still need to accomplish part three, but it will not be due until December 18.
-
-Furthermore, in contrast to the previous assignment, you will not be expected
-to exactly implement your conceptualization.  This is likely the hardest part,
-and the part that would cause the biggest heartache.  You must *attempt* to
-implement the conceptualization, but describe in detail in an accompanying
-written document where you ran into issues.  **The grading structure for these
-will be compassionate and forgiving.**
-
+  This week we talked about making things reusable.
 ---
 
 # This Week: Putting it Together
@@ -333,7 +303,7 @@ The important parts here are `setup.py` and the `my_package` subdirectory.
 This sure seems like a lot to keep straight, right?
 
 Fortunately, there's a project that can really help out!
-[Cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.2/) is a templating
+[Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) is a templating
 system that has been applied to making it easy to create python packages.
 
 Let's try it out!
@@ -347,7 +317,4 @@ $ cookiecutter gh:audreyr/cookiecutter-pypackage
 
 ## Next Time
 
-Next time we will talk a little bit about testing and about how to set up
-workflows to use in your projects.
-
-And, some dashboarding fun!
+Next time, we start with presentations!

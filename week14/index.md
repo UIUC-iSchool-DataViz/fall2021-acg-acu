@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: false
+visible: true
 icon: undraw_researching_22gp.svg
 notitle: true
 examples: []
